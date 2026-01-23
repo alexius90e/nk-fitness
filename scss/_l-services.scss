@@ -1,2 +1,208 @@
 .services {
+  padding: 64px 0 48px;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(100% / 3 - 24px / 3 * 2);
+    gap: 32px;
+    padding: 8px 8px 32px;
+    box-sizing: border-box;
+    border-radius: 32px;
+
+    &_gym {
+      background: linear-gradient(180deg, #f7f7f7 0%, #f3f4fb 100%);
+    }
+
+    &_groups {
+      padding: 32px 8px 8px;
+      background: linear-gradient(180deg, #e1f0fa 25%, #8db9d6 100%);
+    }
+
+    &_spa {
+      background-color: #f4f4fb;
+    }
+
+    &-figure {
+      margin: 0;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 28px;
+      }
+    }
+
+    &_groups &-figure {
+      order: 1;
+    }
+
+    &-info {
+      padding: 0 16px;
+
+      &-title {
+        margin: 0 0 16px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 125%;
+        color: #282828;
+      }
+
+      &-description {
+        margin: 0 0 16px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: #282828;
+      }
+
+      &-more {
+        margin: 0;
+
+        &-button {
+          display: flex;
+          align-items: flex-end;
+          gap: 6px;
+          padding: 0;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 125%;
+          color: #8f2d29;
+          border: none;
+          background-color: rgba($color: #ffffff, $alpha: 0);
+          cursor: pointer;
+
+          &:hover {
+            color: #9f322d;
+          }
+
+          &:active {
+            color: #af3732;
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            flex: 0 0 auto;
+            width: 16px;
+            aspect-ratio: 1;
+            background: url(../assets/arrow-red.svg) center / cover no-repeat;
+          }
+        }
+      }
+    }
+
+    &_groups &-info {
+      order: 0;
+    }
+
+    &-details {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba($color: #282828, $alpha: 0.5);
+      opacity: 0;
+      pointer-events: none;
+
+      &-body {
+        position: relative;
+        display: flex;
+        gap: 32px;
+        max-width: 916px;
+        max-height: calc(100dvh - 15px * 2);
+        width: calc(100dvw - 15px * 2);
+        padding: 48px;
+        box-sizing: border-box;
+        border-radius: 32px;
+        background-color: #fefefe;
+      }
+
+      &-close {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        z-index: 10;
+        display: block;
+        width: 36px;
+        aspect-ratio: 1;
+        background: url(../assets/close.svg) center / 18px no-repeat;
+        cursor: pointer;
+      }
+
+      &-sidebar {
+        flex: 0 0 348px;
+
+        &-figure {
+          margin: 0 0 16px;
+
+          &-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 32px;
+          }
+        }
+
+        &-choose {
+          &-button {
+            display: inline-block;
+            width: 100%;
+            padding: 16px 24px;
+            box-sizing: border-box;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 125%;
+            color: #fefefe;
+            border: none;
+            border-radius: 32px;
+            background-color: #8f2d29;
+            transition-property: background-color;
+            transition-timing-function: ease-out;
+            transition-duration: 0.2s;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #9f322d;
+            }
+
+            &:active {
+              background-color: #af3732;
+            }
+          }
+        }
+      }
+
+      &-info {
+        &-title {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 125%;
+          color: #282828;
+        }
+
+        &-paragraph {
+          margin: 16px 0 0;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 125%;
+          color: #282828;
+        }
+      }
+    }
+
+    &.active &-details {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
 }

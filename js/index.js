@@ -8,9 +8,9 @@ if (headerEl) {
   let ticking = false;
 
   function updateHeader(scrollTop) {
-    if (scrollTop < 200) {
+    if (scrollTop < 120) {
       headerEl.classList.remove('active', 'hidden');
-    } else if (scrollTop >= 200 && scrollTop <= 240) {
+    } else if (scrollTop >= 120 && scrollTop <= 160) {
       headerEl.classList.remove('active');
       headerEl.classList.add('hidden');
     } else {
@@ -58,3 +58,18 @@ if (firstScreenSwiperEl) {
     },
   });
 }
+
+// services
+
+const servicesItemEls = document.querySelectorAll('.services__item');
+
+servicesItemEls.forEach((servicesItem) => {
+  servicesItem.addEventListener('click', (event) => {
+    const isClose = event.target.classList.contains('services__item-details-close');
+    const isDetails = event.target.classList.contains('services__item-details');
+    const isMoreBtn = event.target.classList.contains('services__item-info-more-button');
+
+    if (isMoreBtn) event.currentTarget.classList.add('active');
+    if (isClose || isDetails) event.currentTarget.classList.remove('active');
+  });
+});

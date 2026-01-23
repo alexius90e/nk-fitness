@@ -1,2 +1,114 @@
 .advantages {
+  padding: 48px 0;
+
+  &__title {
+    margin: 0 0 -12px;
+    font-family: 'Christopher', sans-serif;
+    font-weight: 500;
+    font-size: 84px;
+    line-height: 100%;
+    color: #4f0001;
+  }
+
+  &__description {
+    margin: 0 0 32px;
+    padding-left: 32px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 110%;
+    color: #282828;
+  }
+
+  &__cards {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(100% / 3 - 24px / 3 * 2);
+    gap: 32px;
+    padding: 8px 8px 32px;
+    box-sizing: border-box;
+    border-radius: 32px;
+
+    &_price {
+      background: linear-gradient(180deg, #f7f7f7 0%, #f3f4fb 100%);
+    }
+
+    &_equipment {
+      padding: 32px 8px 8px;
+      background: linear-gradient(180deg, #f7f7f7 0%, #f3f4fb 100%);
+    }
+
+    &_groups {
+      justify-content: flex-end;
+      padding: 0;
+      background: linear-gradient(180deg, #f7f7f7 0%, #f3f4fb 100%);
+    }
+
+    &-figure {
+      margin: 0;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 28px;
+      }
+    }
+
+    &_equipment &-figure {
+      order: 1;
+    }
+
+    &_groups &-figure {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+
+      &-image {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-info {
+      position: relative;
+      z-index: 10;
+      padding: 0 16px;
+
+      &-title {
+        margin: 0 0 16px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 125%;
+        color: #282828;
+      }
+
+      &-description {
+        margin: 0;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: #282828;
+      }
+    }
+
+    &_equipment &-info {
+      order: 0;
+    }
+
+    &_groups &-info {
+      padding: 32px 24px;
+
+      &-title, &-description {
+        color: #fefefe;
+      }
+    }
+  }
 }

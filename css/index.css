@@ -1104,6 +1104,160 @@ textarea {
   color: #fefefe;
 }
 
+.atmosphere {
+  padding: 48px 0;
+}
+.atmosphere__wrapper {
+  display: block;
+}
+.atmosphere__slider .swiper-pagination {
+  left: 48px;
+  bottom: 32px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.atmosphere__slider .swiper-pagination-bullet {
+  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin: 0 6px !important;
+  width: 12px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: #d8d9d8;
+  opacity: 1;
+  -webkit-transition-property: width, background-color;
+  transition-property: width, background-color;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+.atmosphere__slider .swiper-pagination-bullet-active {
+  width: 28px;
+  background-color: #fefefe;
+}
+.atmosphere__slider .swiper-button-prev, .atmosphere__slider .swiper-button-next {
+  position: absolute;
+  top: auto !important;
+  left: auto !important;
+  bottom: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0 !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #f4f4fb;
+  border-radius: 9999px;
+  padding: 8px;
+  background: rgba(60, 63, 92, 0.2);
+  backdrop-filter: blur(4px);
+}
+.atmosphere__slider .swiper-button-prev::before, .atmosphere__slider .swiper-button-next::before {
+  content: "";
+  display: block;
+  width: 24px;
+  aspect-ratio: 1;
+  background: url(../assets/next.svg) center/24px no-repeat;
+  -webkit-filter: brightness(0%) invert(100%);
+          filter: brightness(0%) invert(100%);
+}
+.atmosphere__slider .swiper-button-prev .swiper-navigation-icon, .atmosphere__slider .swiper-button-next .swiper-navigation-icon {
+  display: none;
+}
+.atmosphere__slider .swiper-button-prev {
+  right: 112px;
+}
+.atmosphere__slider .swiper-button-prev::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.atmosphere__slider .swiper-button-next {
+  right: 48px;
+}
+.atmosphere__slide {
+  position: relative;
+  width: 100%;
+  height: 640px;
+  border-radius: 32px;
+  overflow: hidden;
+  background-color: #282828;
+}
+.atmosphere__slide-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.atmosphere__slide-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.atmosphere__slide-overlay.hidden {
+  display: none;
+}
+.atmosphere__slide-overlay-photo {
+  margin: 0;
+}
+.atmosphere__slide-overlay-photo-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.atmosphere__slide-overlay-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 72px;
+  height: 72px;
+  border: 1px solid #f4f4fb;
+  border-radius: 9999px;
+  background: rgba(60, 63, 92, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  cursor: pointer;
+}
+.atmosphere__slide-overlay-play::before {
+  content: "";
+  display: block;
+  width: 36px;
+  aspect-ratio: 1;
+  background: url(../assets/play.svg) center/cover no-repeat;
+  -webkit-transform: translateX(3px);
+          transform: translateX(3px);
+}
+
 .footer {
   padding: 48px 0;
 }

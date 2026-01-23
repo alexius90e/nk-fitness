@@ -91,3 +91,48 @@ if (aboutTariffsSwiperEl) {
     },
   });
 }
+
+// atmosphere
+
+const atmosphereSwiperEl = document.querySelector('.atmosphere .swiper');
+
+if (atmosphereSwiperEl) {
+  const atmosphereSwiper = new Swiper(atmosphereSwiperEl, {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 24,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next',
+    },
+  });
+
+  let players = [];
+  function onYouTubeIframeAPIReady() {
+    document.querySelectorAll('.atmosphere__slide-iframe').forEach((iframe, i) => {
+      players[i] = new YT.Player(iframe);
+    });
+  }
+  document.querySelectorAll('.atmosphere__slide-overlay-play').forEach((btn, i) => {
+    btn.addEventListener('click', () => {
+      const overlay = btn.closest('.atmosphere__slide-overlay');
+      overlay.classList.add('hidden');
+      if (players[i] && players[i].playVideo) {
+        players[i].playVideo();
+      }
+    });
+  });
+
+  atmosphereSwiper.on('slideChange', () => {
+    players.forEach((player) => {
+      if (player && player.pauseVideo) player.pauseVideo();
+    });
+    document.querySelectorAll('.atmosphere__slide-overlay').forEach((overlay) => {
+      overlay.classList.remove('hidden');
+    });
+  });
+}

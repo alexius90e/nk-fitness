@@ -1,2 +1,167 @@
 .loyalty {
+  padding: 48px 0;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 50px 48px;
+    overflow: hidden;
+    border-radius: 32px;
+    background-color: #f4f4fb;
+  }
+
+  &__info {
+    position: relative;
+    z-index: 10;
+    flex: 1 1 auto;
+
+    &-title {
+      margin: 0 0 -12px;
+      font-family: 'Christopher', sans-serif;
+      font-weight: 500;
+      font-size: 84px;
+      line-height: 100%;
+      color: #4f0001;
+    }
+
+    &-description {
+      padding-left: 32px;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 110%;
+      color: #282828;
+    }
+
+    &-advantages {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 32px 0;
+
+      &-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: #1c1c1c;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 20px;
+          aspect-ratio: 1;
+          background: url(../assets/checked.svg) center / cover no-repeat;
+        }
+      }
+    }
+
+    &-text {
+      margin: 0 0 16px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 125%;
+      color: #1c1c1c;
+    }
+
+    &-download {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      &-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 24px;
+        border: 2px solid #e1f0fa;
+        border-radius: 32px;
+        background-color: #fefefe;
+        transition-property: background-color;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #f2f8fd;
+        }
+
+        &:active {
+          background-color: #e1f0fa;
+        }
+
+        &-logo {
+          display: block;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  &__more {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    flex: 0 0 360px;
+    min-height: 398px;
+    padding: 16px;
+    border-radius: 32px;
+    background: linear-gradient(334deg, #d3d2d2 18%, #9abdd9 86%);
+
+    &-figure {
+      position: absolute;
+      top: 8px;
+      right: -14px;
+      z-index: 1;
+      max-width: 452px;
+      width: 452px;
+      margin: 0;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-about {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+
+      &-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px 24px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: #282828;
+        border: none;
+        border-radius: 32px;
+        background-color: #fefefe;
+        transition-property: background-color;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #f2f8fd;
+        }
+
+        &:active {
+          background-color: #e1f0fa;
+        }
+      }
+    }
+  }
 }

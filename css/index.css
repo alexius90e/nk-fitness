@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 html {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
@@ -10,8 +11,8 @@ body {
   position: relative;
   margin: 0;
   overflow-y: scroll;
-  color: #000000;
-  background-color: #ffffff;
+  color: #282828;
+  background-color: #fefefe;
 }
 
 a,
@@ -22,15 +23,6 @@ textarea {
   text-decoration: none;
 }
 
-figure {
-  margin: 0;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .custom-container {
   max-width: 1170px;
   width: 100%;
@@ -38,4 +30,169 @@ img {
   padding: 0 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.footer {
+  padding: 48px 0;
+}
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 32px;
+  padding: 48px 48px 32px;
+  border-radius: 32px;
+  background: #f4f4fb;
+}
+.footer__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  gap: 32px;
+}
+.footer__main-logo-link {
+  display: block;
+}
+.footer__main-logo-link-image {
+  display: block;
+  max-width: 100%;
+  width: 250px;
+  height: auto;
+}
+.footer__main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 64px;
+}
+.footer__main-nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.footer__main-nav-menu-item-link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: #9c9999;
+  -webkit-transition: color ease-out 0.2s;
+  transition: color ease-out 0.2s;
+}
+.footer__main-nav-menu-item-link:hover {
+  color: #8f2d29;
+}
+.footer__main-phone-link {
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #282828;
+  border-radius: 32px;
+  background-color: #fefefe;
+  -webkit-transition: color ease-out 0.2s;
+  transition: color ease-out 0.2s;
+}
+.footer__main-phone-link:hover {
+  color: #8f2d29;
+}
+.footer__app {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 232px;
+          flex: 0 0 232px;
+}
+.footer__app-download {
+  margin: 0 0 16px;
+  padding: 24px;
+  border-radius: 32px;
+  background-color: #ffffff;
+}
+.footer__app-download-title {
+  margin: 0 0 16px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 125%;
+  color: #282828;
+}
+.footer__app-download-qr {
+  margin: 0;
+}
+.footer__app-download-qr-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.footer__app-store {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__app-store-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 64px;
+  aspect-ratio: 1;
+  border-radius: 64px;
+  background-color: #fefefe;
+  -webkit-transition: background-color ease-out 0.2s;
+  transition: background-color ease-out 0.2s;
+}
+.footer__app-store-link:hover {
+  background-color: #fafafa;
+}
+.footer__app-store-link:active {
+  background-color: #f2f2f2;
+}
+.footer__app-store-link-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.footer__copyright-content {
+  max-width: 464px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 125%;
+  color: #808080;
 }

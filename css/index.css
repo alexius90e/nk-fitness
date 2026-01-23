@@ -1217,12 +1217,17 @@ textarea {
   display: none;
 }
 .atmosphere__slide-overlay-photo {
+  width: 100%;
+  height: 100%;
   margin: 0;
 }
 .atmosphere__slide-overlay-photo-image {
   display: block;
   max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .atmosphere__slide-overlay-play {
   position: absolute;

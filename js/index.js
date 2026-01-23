@@ -73,3 +73,21 @@ servicesItemEls.forEach((servicesItem) => {
     if (isClose || isDetails) event.currentTarget.classList.remove('active');
   });
 });
+
+// about-tariffs
+
+const aboutTariffsSwiperEl = document.querySelector('.about-tariffs .swiper');
+const aboutTariffsPrevBtnEl = document.querySelector('.about-tariffs__heading-controls-prev');
+const aboutTariffsNextBtnEl = document.querySelector('.about-tariffs__heading-controls-next');
+
+if (aboutTariffsSwiperEl) {
+  const aboutTariffsSwiper = new Swiper(aboutTariffsSwiperEl, {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 24,
+    navigation: {
+      prevEl: aboutTariffsPrevBtnEl,
+      nextEl: aboutTariffsNextBtnEl,
+    },
+  });
+}

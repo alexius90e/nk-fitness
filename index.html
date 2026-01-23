@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Title</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/index.css" />
-    <script type="module" src="./js/index.js" defer></script>
+    <script src="./js/swiper-bundle.min.js" defer></script>
+    <script src="./js/index.js" defer></script>
   </head>
 
   <body>
@@ -14,7 +16,50 @@
 
     <main class="main">
       <section class="first-screen">
-        <div class="custom-container"></div>
+        <div class="custom-container">
+          <div class="first-screen__wrapper">
+            <div class="first-screen__slider">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="first-screen__slide">
+                      <div class="first-screen__slide-description">
+                        Успей купить абонемент на год со скидкой до 30%
+                      </div>
+                      <div class="first-screen__slide-title">Акция года</div>
+                      <div class="first-screen__slide-request">
+                        <button class="first-screen__slide-request-button">Оставить заявку</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="first-screen__slide">
+                      <div class="first-screen__slide-description">
+                        Успей купить абонемент на год со скидкой до 90%
+                      </div>
+                      <div class="first-screen__slide-title">Акция осени</div>
+                      <div class="first-screen__slide-request">
+                        <button class="first-screen__slide-request-button">Оставить заявку</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="first-screen__slide">
+                      <div class="first-screen__slide-description">
+                        Успей купить абонемент на год со скидкой до 90%
+                      </div>
+                      <div class="first-screen__slide-title">Акция зимы</div>
+                      <div class="first-screen__slide-request">
+                        <button class="first-screen__slide-request-button">Оставить заявку</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="services">

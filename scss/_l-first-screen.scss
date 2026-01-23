@@ -1,2 +1,125 @@
 .first-screen {
+  position: relative;
+  padding: 126px 0 0;
+  overflow: hidden;
+  background: url(../assets/gradients.svg) center / cover no-repeat;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: calc(100% / 2 + 194px);
+    bottom: -190px;
+    display: inline-block;
+    width: 716px;
+    height: 668px;
+    background: url(../assets/circles-bg.svg) center / cover no-repeat;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 10;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      bottom: 0;
+      display: inline-block;
+      width: 493px;
+      height: 739px;
+      background: url(../assets/first-screen-girl.png) center / cover no-repeat;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    z-index: 1;
+
+    & .swiper {
+      &-pagination {
+        bottom: 50px;
+
+        &-bullet {
+          display: inline-block;
+          flex: 0 0 auto;
+          margin: 0 6px !important;
+          width: 12px;
+          height: 8px;
+          border-radius: 8px;
+          background-color: #d8d9d8;
+          opacity: 1;
+          transition-property: width, background-color;
+          transition-timing-function: linear;
+          transition-duration: 0.2s;
+
+          &-active {
+            width: 28px;
+            background-color: #fefefe;
+          }
+        }
+      }
+    }
+  }
+
+  &__slide {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    min-height: 730px;
+    padding: 160px 0;
+    box-sizing: border-box;
+
+    & * {
+      user-select: none;
+    }
+
+    &-description {
+      max-width: 604px;
+      margin-left: 64px;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 110%;
+      color: #282828;
+    }
+
+    &-title {
+      margin: 0 0 32px;
+      font-family: 'Christopher', sans-serif;
+      font-weight: 500;
+      font-size: 184px;
+      line-height: 100%;
+      color: #4f0001;
+    }
+
+    &-request {
+      &-button {
+        display: inline-block;
+        padding: 16px 24px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: #fefefe;
+        border: none;
+        border-radius: 32px;
+        background-color: #8f2d29;
+        transition-property: background-color;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #9f322d;
+        }
+
+        &:active {
+          background-color: #af3732;
+        }
+      }
+    }
+  }
 }

@@ -1,2 +1,119 @@
 .about-us {
+  padding: 48px 0;
+
+  &__wrapper {
+    position: relative;
+    padding: 48px;
+    overflow: hidden;
+    border-radius: 32px;
+    background: linear-gradient(180deg, #e1f0fa 25%, #8db9d6 100%);
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      right: -88px;
+      bottom: -176px;
+      display: inline-block;
+      width: 440px;
+      height: 410px;
+      background: url(../assets/circles-bg.svg) center / cover no-repeat;
+      opacity: 0.5;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__info {
+    position: relative;
+    z-index: 10;
+
+    &-title {
+      margin: 0 0 -12px;
+      font-family: 'Christopher', sans-serif;
+      font-weight: 500;
+      font-size: 84px;
+      line-height: 100%;
+      color: #4f0001;
+    }
+
+    &-description {
+      padding-left: 32px;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 110%;
+      color: #282828;
+    }
+
+    &-advantages {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 32px 0;
+
+      &-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: #1c1c1c;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 20px;
+          aspect-ratio: 1;
+          background: url(../assets/checked.svg) center / cover no-repeat;
+        }
+      }
+    }
+
+    &-training {
+      &-button {
+        display: inline-block;
+        padding: 16px 24px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: #fefefe;
+        border: none;
+        border-radius: 32px;
+        background-color: #8f2d29;
+        transition-property: background-color;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #9f322d;
+        }
+
+        &:active {
+          background-color: #af3732;
+        }
+      }
+    }
+  }
+
+  &__photo {
+    position: absolute;
+    top: 0;
+    right: 84px;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    max-width: 640px;
+    margin: 0;
+    overflow: hidden;
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }

@@ -1,2 +1,94 @@
-.main {
+.gift-cards {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 48px;
+    overflow: hidden;
+    border-radius: 38px;
+    background: url(../assets/gift-cards-bg.svg) center / cover no-repeat;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -88px;
+      z-index: 1;
+      display: block;
+      width: 459px;
+      aspect-ratio: 459 / 561;
+      background: url(../assets/spiral.svg) center / cover no-repeat;
+    }
+  }
+
+  &__info {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 48px 0;
+
+    &-title {
+      margin: 0 0 -12px;
+      font-family: 'Christopher', sans-serif;
+      font-weight: 500;
+      font-size: 84px;
+      line-height: 100%;
+      color: #4f0001;
+    }
+
+    &-description {
+      margin: 0 0 32px;
+      padding-left: 32px;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 110%;
+      color: #282828;
+    }
+
+    &-give {
+      &-button {
+        display: inline-block;
+        padding: 16px 24px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: #fefefe;
+        border: none;
+        border-radius: 32px;
+        background-color: #8f2d29;
+        transition-property: background-color;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #9f322d;
+        }
+
+        &:active {
+          background-color: #af3732;
+        }
+      }
+    }
+  }
+
+  &__figure {
+        position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: flex-end;
+    flex: 0 1 auto;
+    margin: 0;
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }

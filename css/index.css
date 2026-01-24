@@ -2516,3 +2516,64 @@ textarea {
   -webkit-animation: spin-cw 4s linear infinite, pulse 2s ease-in-out infinite;
           animation: spin-cw 4s linear infinite, pulse 2s ease-in-out infinite;
 }
+
+.not-found {
+  position: relative;
+  padding: 391px 0 196px;
+  overflow: hidden;
+  background: url(../assets/gradients.svg) center/cover no-repeat;
+}
+.not-found::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: calc(50% + 194px);
+  bottom: -190px;
+  display: inline-block;
+  width: 716px;
+  height: 668px;
+  background: url(../assets/circles-bg.svg) center/cover no-repeat;
+}
+.not-found__description {
+  max-width: 446px;
+  margin: 0;
+  margin-left: 64px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 110%;
+  color: #282828;
+}
+.not-found__title {
+  margin: -12px 0 32px;
+  font-family: "Christopher", sans-serif;
+  font-weight: 500;
+  font-size: 184px;
+  line-height: 100%;
+  color: #4f0001;
+}
+.not-found__back-link {
+  display: inline-block;
+  padding: 16px 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #fefefe;
+  border: none;
+  border-radius: 32px;
+  background-color: #8f2d29;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  cursor: pointer;
+}
+.not-found__back-link:hover {
+  background-color: #9f322d;
+}
+.not-found__back-link:active {
+  background-color: #af3732;
+}

@@ -1,0 +1,65 @@
+.not-found {
+  position: relative;
+  padding: 391px 0 196px;
+  overflow: hidden;
+  background: url(../assets/gradients.svg) center / cover no-repeat;
+
+  
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: calc(100% / 2 + 194px);
+    bottom: -190px;
+    display: inline-block;
+    width: 716px;
+    height: 668px;
+    background: url(../assets/circles-bg.svg) center / cover no-repeat;
+  }
+
+  &__description {
+    max-width: 446px;
+    margin: 0;
+    margin-left: 64px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 110%;
+    color: #282828;
+  }
+
+  &__title {
+    margin: -12px 0 32px;
+    font-family: 'Christopher', sans-serif;
+    font-weight: 500;
+    font-size: 184px;
+    line-height: 100%;
+    color: #4f0001;
+  }
+
+  &__back {
+    &-link {
+      display: inline-block;
+      padding: 16px 24px;
+      box-sizing: border-box;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 125%;
+      color: #fefefe;
+      border: none;
+      border-radius: 32px;
+      background-color: #8f2d29;
+      transition-property: background-color;
+      transition-timing-function: ease-out;
+      transition-duration: 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #9f322d;
+      }
+
+      &:active {
+        background-color: #af3732;
+      }
+    }
+  }
+}

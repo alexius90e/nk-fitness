@@ -229,3 +229,17 @@ if (cookies) {
     if (isAgreeBtn) event.currentTarget.classList.remove('active');
   });
 }
+
+// loader
+
+const loader = document.querySelector('.loader');
+
+if (loader) {
+  document.body.style.overflow = 'hidden';
+  loader.classList.add('active');
+
+  setTimeout(() => {
+    document.body.style.overflow = null;
+    loader.classList.remove('active');
+  }, 2000);
+}

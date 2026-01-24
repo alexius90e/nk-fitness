@@ -1191,10 +1191,17 @@
             <div class="callback__description">и мы свяжемся с тобой</div>
 
             <form class="callback__form">
-              <input class="callback__form-input" type="text" placeholder="Имя *" required />
+              <input
+                class="callback__form-input"
+                type="text"
+                name="name"
+                placeholder="Имя *"
+                required
+              />
               <input
                 class="callback__form-input"
                 type="tel"
+                name="phone"
                 placeholder="+7 (999) 999 99-99 *"
                 required
               />
@@ -1317,5 +1324,19 @@
         </div>
       </div>
     </footer>
+
+    <div class="cookies active">
+      <figure class="cookies__icon">
+        <img class="cookies__icon-image" src="./assets/cookies.svg" alt="cookies" />
+      </figure>
+      <div class="cookies__message">
+        Мы используем файлы cookie для улучшения работы сайта и анализа посещаемости. Продолжая
+        использовать сайт, вы соглашаетесь с
+        <a class="cookies__message-link" href="#">политикой обработки файлов cookie</a>
+      </div>
+      <div class="cookies__agree">
+        <button class="cookies__agree-button">Понятно</button>
+      </div>
+    </div>
   </body>
 </html>

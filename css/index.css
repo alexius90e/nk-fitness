@@ -2302,3 +2302,100 @@ textarea {
   line-height: 125%;
   color: #808080;
 }
+
+.cookies {
+  position: fixed;
+  left: 50%;
+  bottom: 32px;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 24px;
+  max-width: calc(100dvw - 30px);
+  width: 920px;
+  padding: 16px 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 32px;
+  background-color: #fefefe;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: none;
+}
+.cookies.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.cookies__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  margin: 0;
+  border-radius: 60px;
+  background-color: #f4f4fb;
+}
+.cookies__icon-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.cookies__message {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 125%;
+  color: #282828;
+}
+.cookies__message-link {
+  color: inherit;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.cookies__agree {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.cookies__agree-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #282828;
+  border: none;
+  border-radius: 42px;
+  background-color: #f4f4fb;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  cursor: pointer;
+}
+.cookies__agree-button:hover {
+  background-color: #f2f8fd;
+}
+.cookies__agree-button:active {
+  background-color: #e1f0fa;
+}

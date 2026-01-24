@@ -218,3 +218,14 @@ window.addEventListener('resize', () => {
     }
   });
 });
+
+// cookies
+
+const cookies = document.querySelector('.cookies');
+
+if (cookies) {
+  cookies.addEventListener('click', (event) => {
+    const isAgreeBtn = event.target.classList.contains('cookies__agree-button');
+    if (isAgreeBtn) event.currentTarget.classList.remove('active');
+  });
+}

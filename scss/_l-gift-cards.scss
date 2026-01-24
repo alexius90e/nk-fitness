@@ -1,4 +1,6 @@
 .gift-cards {
+  padding: 48px 0;
+
   &__wrapper {
     position: relative;
     display: flex;
@@ -78,7 +80,7 @@
   }
 
   &__figure {
-        position: relative;
+    position: relative;
     z-index: 10;
     display: flex;
     align-items: flex-end;

@@ -77,6 +77,7 @@
           color: #8f2d29;
           border: none;
           background-color: rgba($color: #ffffff, $alpha: 0);
+          transition: color ease-out 0.2s;
           cursor: pointer;
 
           &:hover {

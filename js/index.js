@@ -136,3 +136,10 @@ if (atmosphereSwiperEl) {
     });
   });
 }
+
+// blog
+
+const blogArticleFavoutitesButtons = document.querySelectorAll('.blog__article-favoutites-button');
+blogArticleFavoutitesButtons.forEach((button) =>
+  button.addEventListener('click', (event) => event.currentTarget.classList.toggle('active')),
+);

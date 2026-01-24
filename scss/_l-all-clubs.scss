@@ -1,2 +1,111 @@
 .all-clubs {
+  padding: 48px 0;
+
+  &__title {
+    margin: 0 0 -12px;
+    font-family: 'Christopher', sans-serif;
+    font-weight: 500;
+    font-size: 84px;
+    line-height: 100%;
+    color: #4f0001;
+  }
+
+  &__description {
+    margin: 0 0 32px;
+    padding-left: 32px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 110%;
+    color: #282828;
+  }
+
+  &__clubs {
+    position: relative;
+
+    &-map {
+      margin: 0;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 32px;
+      }
+    }
+
+    &-tag {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 26px;
+        background: url(../assets/location_on.svg) center / cover no-repeat;
+      }
+
+      &_bolshevikov {
+        top: calc(391 / 526 * 100%);
+        left: calc(117 / 1140 * 100%);
+      }
+
+      &_sheronova {
+        top: calc(192 / 526 * 100%);
+        left: calc(583 / 1140 * 100%);
+      }
+
+      &_yubilejnaya {
+        top: calc(371 / 526 * 100%);
+        right: calc(198 / 1140 * 100%);
+        flex-direction: row-reverse;
+      }
+
+      &-name {
+        flex: 0 0 auto;
+        padding: 8px 12px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 125%;
+        color: #282828;
+        border-radius: 32px;
+        background-color: #fefefe;
+      }
+    }
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 0;
+
+    &-link {
+      display: inline-block;
+      flex: 0 0 auto;
+      min-height: 44px;
+      padding: 12px 24px;
+      box-sizing: border-box;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 125%;
+      color: #282828;
+      border: none;
+      border-radius: 32px;
+      background-color: #f4f4fb;
+      transition-property: background-color;
+      transition-timing-function: ease-out;
+      transition-duration: 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f2f8fd;
+      }
+
+      &:active {
+        background-color: #e1f0fa;
+      }
+    }
+  }
 }

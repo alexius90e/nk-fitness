@@ -1,2 +1,109 @@
 .callback {
+  padding: 48px 0;
+
+  &__wrapper {
+    position: relative;
+    padding: 81px 48px;
+    overflow: hidden;
+    border-radius: 32px;
+    background: linear-gradient(180deg, #e1f0fa 25%, #8db9d6 100%);
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: -157px;
+      bottom: -39px;
+      z-index: 1;
+      display: block;
+      width: 718px;
+      aspect-ratio: 718 / 620;
+      background: url(../assets/spiral2.svg) center / cover no-repeat;
+    }
+
+    & > * {
+      position: relative;
+      z-index: 10;
+    }
+  }
+
+  &__title {
+    margin: 0 0 -12px;
+    font-family: 'Christopher', sans-serif;
+    font-weight: 500;
+    font-size: 84px;
+    line-height: 100%;
+    color: #4f0001;
+  }
+
+  &__description {
+    margin: 0 0 32px;
+    padding-left: 32px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 110%;
+    color: #282828;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 510px;
+
+    &-input {
+      display: inline-block;
+      width: 100%;
+      padding: 16px 32px;
+      box-sizing: border-box;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 125%;
+      color: #282828;
+      border: none;
+      border-radius: 32px;
+      outline-color: #4f0001;
+
+      &::placeholder {
+        color: #9c9999;
+      }
+    }
+
+    &-submit {
+      display: inline-block;
+      padding: 16px 24px;
+      box-sizing: border-box;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 125%;
+      color: #fefefe;
+      border: none;
+      border-radius: 32px;
+      background-color: #8f2d29;
+      transition-property: background-color;
+      transition-timing-function: ease-out;
+      transition-duration: 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #9f322d;
+      }
+
+      &:active {
+        background-color: #af3732;
+      }
+    }
+
+    &-disclaimer {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 125%;
+      color: #fefefe;
+
+      &-link {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
+    }
+  }
 }

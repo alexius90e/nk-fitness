@@ -1191,15 +1191,21 @@
             <div class="callback__description">и мы свяжемся с тобой</div>
 
             <form class="callback__form">
-              <input class="callback__form-input" type="text" placeholder="Имя *" />
-              <input class="callback__form-input" type="tel" placeholder="+7 (999) 999 99-99 *" />
+              <input class="callback__form-input" type="text" placeholder="Имя *" required />
+              <input
+                class="callback__form-input"
+                type="tel"
+                placeholder="+7 (999) 999 99-99 *"
+                required
+              />
               <button class="callback__form-submit">Отправить</button>
+              <div class="callback__form-disclaimer">
+                Нажимая на кнопку вы соглашаетесь с
+                <a class="callback__form-disclaimer-link" href="#">
+                  политикой обработки персональных данных
+                </a>
+              </div>
             </form>
-
-            <div class="callback__disclaimer">
-              Нажимая на кнопку вы соглашаетесь с
-              <a href="#">политикой обработки персональных данных</a>
-            </div>
           </div>
         </div>
       </section>

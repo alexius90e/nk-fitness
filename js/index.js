@@ -140,6 +140,81 @@ if (atmosphereSwiperEl) {
 // blog
 
 const blogArticleFavoutitesButtons = document.querySelectorAll('.blog__article-favoutites-button');
+
 blogArticleFavoutitesButtons.forEach((button) =>
   button.addEventListener('click', (event) => event.currentTarget.classList.toggle('active')),
 );
+
+// faq
+
+const faqMenuButtons = document.querySelectorAll('.faq__menu-item-button');
+const faqBlocks = document.querySelectorAll('.faq__block');
+
+function showBlock(target) {
+  faqBlocks.forEach((block) => block.classList.remove('active'));
+  const block = document.querySelector(`.faq__block[data-block="${target}"]`);
+  if (block) block.classList.add('active');
+}
+
+faqMenuButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    faqMenuButtons.forEach((button) => button.classList.remove('active'));
+    button.classList.add('active');
+    showBlock(button.dataset.target);
+  });
+});
+
+const activeFaqMenuButton = document.querySelector('.faq__menu-item-button.active');
+if (activeFaqMenuButton) {
+  showBlock(activeFaqMenuButton.dataset.target);
+}
+
+const faqItems = document.querySelectorAll('.faq__item');
+
+function openFaqItem(faqItem) {
+  const panel = faqItem.querySelector('.faq__item-panel');
+  if (panel) {
+    faqItem.classList.add('active');
+    panel.style.maxHeight = panel.scrollHeight + 'px';
+  }
+}
+
+function closeFaqItem(faqItem) {
+  const panel = faqItem.querySelector('.faq__item-panel');
+  if (panel) {
+    faqItem.classList.remove('active');
+    panel.style.maxHeight = null;
+  }
+}
+
+function toggleFaqItem(faqItem) {
+  if (faqItem.classList.contains('active')) {
+    closeFaqItem(faqItem);
+  } else {
+    openFaqItem(faqItem);
+  }
+}
+
+faqItems.forEach((faqItem) => {
+  faqItem.addEventListener('click', (event) => {
+    const isToggler = event.target.classList.contains('faq__item-toggler');
+    if (isToggler) toggleFaqItem(faqItem);
+  });
+});
+
+faqItems.forEach((faqItem) => {
+  if (faqItem.classList.contains('active')) {
+    openFaqItem(faqItem);
+  }
+});
+
+window.addEventListener('resize', () => {
+  faqItems.forEach((faqItem) => {
+    if (faqItem.classList.contains('active')) {
+      const panel = faqItem.querySelector('.faq__item-panel');
+      if (panel) {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    }
+  });
+});

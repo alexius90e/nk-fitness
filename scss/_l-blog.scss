@@ -133,4 +133,37 @@
       }
     }
   }
+
+    &__more {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 0;
+
+    &-link {
+      display: inline-block;
+      flex: 0 0 auto;
+      min-height: 44px;
+      padding: 12px 24px;
+      box-sizing: border-box;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 125%;
+      color: #282828;
+      border: none;
+      border-radius: 32px;
+      background-color: #f4f4fb;
+      transition-property: background-color;
+      transition-timing-function: ease-out;
+      transition-duration: 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f2f8fd;
+      }
+
+      &:active {
+        background-color: #e1f0fa;
+      }
+    }
+  }
 }

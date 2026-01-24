@@ -1,2 +1,138 @@
 .faq {
+  padding: 48px 0;
+
+  &__title {
+    margin: 0 0 -12px;
+    font-family: 'Christopher', sans-serif;
+    font-weight: 500;
+    font-size: 84px;
+    line-height: 100%;
+    color: #4f0001;
+  }
+
+  &__description {
+    margin: 0 0 32px;
+    padding-left: 32px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 110%;
+    color: #282828;
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+    margin: 0 0 32px;
+    list-style-type: none;
+
+    &-item {
+      flex: 0 0 auto;
+
+      &-button {
+        display: inline-block;
+        flex: 0 0 auto;
+        padding: 12px 24px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: #282828;
+        border: 2px solid #68acd9;
+        border-radius: 32px;
+        background-color: #fefefe;
+        transition-property: background-color, color;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          color: #fefefe;
+          background-color: #68acd9;
+        }
+
+        &:active {
+          color: #282828;
+          background-color: #e1f0fa;
+        }
+
+        &.active {
+          color: #fefefe;
+          background-color: #68acd9;
+        }
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__item {
+    padding: 24px 32px;
+    border: 3px solid #e1f0fa;
+    border-radius: 32px;
+    background-color: #fefefe;
+
+    &-toggler {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 125%;
+      color: #282828;
+      cursor: pointer;
+
+      &::after {
+        content: '';
+        display: block;
+        flex: 0 0 auto;
+        width: 44px;
+        aspect-ratio: 1;
+        border-radius: 32px;
+        background: url(../assets/plus.svg) center / 22px no-repeat;
+        background-color: #f2f8fd;
+        transition: transform ease-out 0.2s;
+      }
+    }
+
+    &.active &-toggler {
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+
+    &-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height ease-out 0.2s;
+
+      &::before {
+        content: '';
+        display: block;
+        height: 16px;
+        width: 100%;
+      }
+
+      &-content {
+        padding: 24px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: #282828;
+        border-radius: 24px;
+        background-color: #e1f0fa;
+      }
+    }
+  }
 }

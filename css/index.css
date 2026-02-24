@@ -2141,6 +2141,11 @@ textarea {
 .footer {
   padding: 48px 0;
 }
+@media (max-width: 576px) {
+  .footer {
+    padding: 12px 0;
+  }
+}
 .footer__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2155,18 +2160,34 @@ textarea {
   border-radius: 32px;
   background: #f4f4fb;
 }
+@media (max-width: 992px) {
+  .footer__wrapper {
+    gap: 32px;
+    padding: 24px 24px 16px;
+  }
+}
 .footer__main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+      -ms-flex: 0 1 700px;
+          flex: 0 1 700px;
+  max-width: calc(100% - 232px - 32px);
   gap: 32px;
+}
+@media (max-width: 768px) {
+  .footer__main {
+    max-width: none;
+  }
+}
+.footer__main-logo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  margin: 0;
 }
 .footer__main-logo-link {
   display: block;
@@ -2181,7 +2202,14 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 64px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 32px 64px;
+}
+@media (max-width: 992px) {
+  .footer__main-nav {
+    gap: 24px;
+  }
 }
 .footer__main-nav-menu {
   display: -webkit-box;
@@ -2192,35 +2220,75 @@ textarea {
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+      -ms-flex: 0 0 calc(50% - 32px);
+          flex: 0 0 calc(50% - 32px);
   gap: 16px;
+  max-width: calc(50% - 32px);
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+@media (max-width: 992px) {
+  .footer__main-nav-menu {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 12px);
+            flex: 0 0 calc(50% - 12px);
+    max-width: calc(50% - 12px);
+  }
+}
+@media (max-width: 576px) {
+  .footer__main-nav-menu {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    max-width: none;
+  }
 }
 .footer__main-nav-menu-item-link {
   font-weight: 600;
   font-size: 16px;
   line-height: 125%;
   color: #9c9999;
+  -ms-hyphens: auto;
+      hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: normal;
   -webkit-transition: color ease-out 0.2s;
   transition: color ease-out 0.2s;
 }
 .footer__main-nav-menu-item-link:hover {
   color: #8f2d29;
 }
+@media (max-width: 768px) {
+  .footer__main-phone {
+    max-width: 288px;
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .footer__main-phone {
+    max-width: none;
+  }
+}
 .footer__main-phone-link {
   display: inline-block;
   padding: 12px 24px;
-  font-weight: 500;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 700;
   font-size: 16px;
   line-height: 125%;
   color: #282828;
+  text-align: center;
   border-radius: 32px;
   background-color: #fefefe;
   -webkit-transition: color ease-out 0.2s;
   transition: color ease-out 0.2s;
+}
+@media (max-width: 768px) {
+  .footer__main-phone-link {
+    width: 100%;
+  }
 }
 .footer__main-phone-link:hover {
   color: #8f2d29;
@@ -2230,11 +2298,23 @@ textarea {
       -ms-flex: 0 0 232px;
           flex: 0 0 232px;
 }
+@media (max-width: 768px) {
+  .footer__app {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
 .footer__app-download {
   margin: 0 0 16px;
   padding: 24px;
   border-radius: 32px;
   background-color: #ffffff;
+}
+@media (max-width: 768px) {
+  .footer__app-download {
+    display: none;
+  }
 }
 .footer__app-download-title {
   margin: 0 0 16px;
@@ -2261,6 +2341,16 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .footer__app-store {
+    max-width: 288px;
+  }
+}
+@media (max-width: 576px) {
+  .footer__app-store {
+    margin: 0 auto;
+  }
 }
 .footer__app-store-link {
   display: -webkit-box;
@@ -2302,7 +2392,6 @@ textarea {
   line-height: 125%;
   color: #808080;
 }
-
 .cookies {
   position: fixed;
   left: 50%;

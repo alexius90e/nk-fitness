@@ -1576,7 +1576,13 @@ textarea {
 }
 
 .gift-cards {
+  position: relative;
   padding: 48px 0;
+}
+@media (max-width: 576px) {
+  .gift-cards {
+    padding: 12px 0;
+  }
 }
 .gift-cards__wrapper {
   position: relative;
@@ -1591,6 +1597,11 @@ textarea {
   border-radius: 38px;
   background: url(../assets/gift-cards-bg.svg) center/cover no-repeat;
 }
+@media (max-width: 768px) {
+  .gift-cards__wrapper {
+    padding: 32px 24px 24px;
+  }
+}
 .gift-cards__wrapper::before {
   content: "";
   position: absolute;
@@ -1601,6 +1612,16 @@ textarea {
   width: 459px;
   aspect-ratio: 459/561;
   background: url(../assets/spiral.svg) center/cover no-repeat;
+}
+@media (max-width: 768px) {
+  .gift-cards__wrapper::before {
+    bottom: 50px;
+  }
+}
+@media (max-width: 576px) {
+  .gift-cards__wrapper::before {
+    right: -50px;
+  }
 }
 .gift-cards__info {
   position: relative;
@@ -1623,13 +1644,36 @@ textarea {
           flex: 1 1 auto;
   padding: 48px 0;
 }
+@media (max-width: 768px) {
+  .gift-cards__info {
+    padding: 0;
+  }
+}
 .gift-cards__info-title {
+  position: absolute;
   margin: 0 0 -12px;
   font-family: "Christopher", sans-serif;
   font-weight: 500;
   font-size: 84px;
   line-height: 100%;
   color: #4f0001;
+  opacity: 0;
+  pointer-events: none;
+}
+.gift-cards__info-heading {
+  display: block;
+  margin: 0;
+}
+.gift-cards__info-heading-image {
+  display: block;
+  max-width: 100%;
+  max-height: 65px;
+  height: auto;
+}
+@media (max-width: 576px) {
+  .gift-cards__info-heading-image {
+    max-height: 38px;
+  }
 }
 .gift-cards__info-description {
   margin: 0 0 32px;
@@ -1638,6 +1682,18 @@ textarea {
   font-size: 22px;
   line-height: 110%;
   color: #282828;
+}
+@media (max-width: 576px) {
+  .gift-cards__info-description {
+    margin-bottom: 17px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .gift-cards__info-give {
+    width: 100%;
+    margin-top: 330px;
+  }
 }
 .gift-cards__info-give-button {
   display: inline-block;
@@ -1659,6 +1715,11 @@ textarea {
           transition-duration: 0.2s;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .gift-cards__info-give-button {
+    width: 100%;
+  }
+}
 .gift-cards__info-give-button:hover {
   background-color: #9f322d;
 }
@@ -1671,18 +1732,61 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
   margin: 0;
+  height: 300px;
+  overflow: hidden;
+}
+@media (max-width: 992px) {
+  .gift-cards__figure {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9;
+  }
+}
+@media (max-width: 768px) {
+  .gift-cards__figure {
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    height: auto;
+  }
 }
 .gift-cards__figure-image {
   display: block;
   max-width: 100%;
   height: auto;
+}
+@media (max-width: 576px) {
+  .gift-cards__figure-image {
+    max-width: none;
+  }
+}
+.gift-cards__figure-image_desktop {
+  display: block;
+}
+@media (max-width: 576px) {
+  .gift-cards__figure-image_desktop {
+    display: none;
+  }
+}
+.gift-cards__figure-image_mobile {
+  display: none;
+}
+@media (max-width: 576px) {
+  .gift-cards__figure-image_mobile {
+    display: block;
+  }
 }
 
 .blog {

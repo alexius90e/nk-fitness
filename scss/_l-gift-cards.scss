@@ -1,5 +1,10 @@
 .gift-cards {
+  position: relative;
   padding: 48px 0;
+
+  @include mobile {
+    padding: 12px 0;
+  }
 
   &__wrapper {
     position: relative;
@@ -9,6 +14,10 @@
     overflow: hidden;
     border-radius: 38px;
     background: url(../assets/gift-cards-bg.svg) center / cover no-repeat;
+
+    @include tablet {
+      padding: 32px 24px 24px;
+    }
 
     &::before {
       content: '';
@@ -20,6 +29,14 @@
       width: 459px;
       aspect-ratio: 459 / 561;
       background: url(../assets/spiral.svg) center / cover no-repeat;
+
+      @include tablet {
+        bottom: 50px;
+      }
+
+      @include mobile {
+        right: -50px;
+      }
     }
   }
 
@@ -33,13 +50,36 @@
     flex: 1 1 auto;
     padding: 48px 0;
 
+    @include tablet {
+      padding: 0;
+    }
+
     &-title {
+      position: absolute;
       margin: 0 0 -12px;
       font-family: 'Christopher', sans-serif;
       font-weight: 500;
       font-size: 84px;
       line-height: 100%;
       color: #4f0001;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &-heading {
+      display: block;
+      margin: 0;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        max-height: 65px;
+        height: auto;
+
+        @include mobile {
+          max-height: 38px;
+        }
+      }
     }
 
     &-description {
@@ -49,9 +89,19 @@
       font-size: 22px;
       line-height: 110%;
       color: #282828;
+
+      @include mobile {
+        margin-bottom: 17px;
+        font-size: 15px;
+      }
     }
 
     &-give {
+      @include tablet {
+        width: 100%;
+        margin-top: 330px;
+      }
+
       &-button {
         display: inline-block;
         padding: 16px 24px;
@@ -68,6 +118,10 @@
         transition-duration: 0.2s;
         cursor: pointer;
 
+        @include tablet {
+          width: 100%;
+        }
+
         &:hover {
           background-color: #9f322d;
         }
@@ -83,14 +137,52 @@
     position: relative;
     z-index: 10;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
+    justify-content: center;
     flex: 0 1 auto;
     margin: 0;
+    height: 300px;
+    overflow: hidden;
+
+    @include laptop {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 9;
+    }
+
+    @include tablet {
+      position: absolute;
+      top: auto;
+      right: 0;
+      bottom: 0;
+      height: auto;
+    }
 
     &-image {
       display: block;
       max-width: 100%;
       height: auto;
+
+      @include mobile {
+        max-width: none;
+      }
+
+      &_desktop {
+        display: block;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &_mobile {
+        display: none;
+
+        @include mobile {
+          display: block;
+        }
+      }
     }
   }
 }

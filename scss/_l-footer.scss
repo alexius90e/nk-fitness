@@ -43,6 +43,10 @@
           max-width: 100%;
           width: 250px;
           height: auto;
+
+          @include mobile {
+            width: 158px;
+          }
         }
       }
     }

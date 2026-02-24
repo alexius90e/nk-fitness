@@ -2018,7 +2018,13 @@ textarea {
 }
 
 .callback {
+  position: relative;
   padding: 48px 0;
+}
+@media (max-width: 576px) {
+  .callback {
+    padding: 12px 0;
+  }
 }
 .callback__wrapper {
   position: relative;
@@ -2027,6 +2033,11 @@ textarea {
   border-radius: 32px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #e1f0fa), to(#8db9d6));
   background: linear-gradient(180deg, #e1f0fa 25%, #8db9d6 100%);
+}
+@media (max-width: 992px) {
+  .callback__wrapper {
+    padding: 32px 24px 24px;
+  }
 }
 .callback__wrapper::before {
   content: "";
@@ -2039,17 +2050,40 @@ textarea {
   aspect-ratio: 718/620;
   background: url(../assets/spiral2.svg) center/cover no-repeat;
 }
+@media (max-width: 576px) {
+  .callback__wrapper::before {
+    display: none;
+  }
+}
 .callback__wrapper > * {
   position: relative;
   z-index: 10;
 }
 .callback__title {
+  position: absolute;
   margin: 0 0 -12px;
   font-family: "Christopher", sans-serif;
   font-weight: 500;
   font-size: 84px;
   line-height: 100%;
   color: #4f0001;
+  opacity: 0;
+  pointer-events: none;
+}
+.callback__heading {
+  display: block;
+  margin: 0;
+}
+.callback__heading-image {
+  display: block;
+  max-width: 100%;
+  max-height: 65px;
+  height: auto;
+}
+@media (max-width: 576px) {
+  .callback__heading-image {
+    max-height: 38px;
+  }
 }
 .callback__description {
   margin: 0 0 32px;
@@ -2058,6 +2092,12 @@ textarea {
   font-size: 22px;
   line-height: 110%;
   color: #282828;
+}
+@media (max-width: 576px) {
+  .callback__description {
+    margin-bottom: 17px;
+    font-size: 15px;
+  }
 }
 .callback__form {
   display: -webkit-box;
@@ -2197,6 +2237,11 @@ textarea {
   max-width: 100%;
   width: 250px;
   height: auto;
+}
+@media (max-width: 576px) {
+  .footer__main-logo-link-image {
+    width: 158px;
+  }
 }
 .footer__main-nav {
   display: -webkit-box;

@@ -863,6 +863,11 @@ textarea {
 .about-us {
   padding: 48px 0;
 }
+@media (max-width: 576px) {
+  .about-us {
+    padding: 12px 0;
+  }
+}
 .about-us__wrapper {
   position: relative;
   padding: 48px;
@@ -870,6 +875,11 @@ textarea {
   border-radius: 32px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #e1f0fa), to(#8db9d6));
   background: linear-gradient(180deg, #e1f0fa 25%, #8db9d6 100%);
+}
+@media (max-width: 992px) {
+  .about-us__wrapper {
+    padding: 24px;
+  }
 }
 .about-us__wrapper::before {
   content: "";
@@ -890,19 +900,44 @@ textarea {
   z-index: 10;
 }
 .about-us__info-title {
+  position: absolute;
   margin: 0 0 -12px;
   font-family: "Christopher", sans-serif;
   font-weight: 500;
   font-size: 84px;
   line-height: 100%;
   color: #4f0001;
+  opacity: 0;
+  pointer-events: none;
+}
+.about-us__info-heading {
+  display: block;
+  margin: 0;
+}
+.about-us__info-heading-image {
+  display: block;
+  max-width: 100%;
+  max-height: 65px;
+  height: auto;
+}
+@media (max-width: 576px) {
+  .about-us__info-heading-image {
+    max-height: 38px;
+  }
 }
 .about-us__info-description {
+  margin: 0 0 32px;
   padding-left: 32px;
   font-weight: 500;
   font-size: 22px;
   line-height: 110%;
   color: #282828;
+}
+@media (max-width: 576px) {
+  .about-us__info-description {
+    margin-bottom: 17px;
+    font-size: 15px;
+  }
 }
 .about-us__info-advantages {
   display: -webkit-box;
@@ -914,6 +949,16 @@ textarea {
           flex-direction: column;
   gap: 12px;
   margin: 32px 0;
+}
+@media (max-width: 992px) {
+  .about-us__info-advantages {
+    margin: 16px 0 280px;
+  }
+}
+@media (max-width: 992px) {
+  .about-us__info-advantages {
+    margin-bottom: 150px;
+  }
 }
 .about-us__info-advantages-item {
   display: -webkit-box;
@@ -955,6 +1000,11 @@ textarea {
           transition-duration: 0.2s;
   cursor: pointer;
 }
+@media (max-width: 576px) {
+  .about-us__info-training-button {
+    width: 100%;
+  }
+}
 .about-us__info-training-button:hover {
   background-color: #9f322d;
 }
@@ -980,10 +1030,22 @@ textarea {
   margin: 0;
   overflow: hidden;
 }
+@media (max-width: 992px) {
+  .about-us__photo {
+    left: 0;
+    right: 0;
+    max-width: none;
+  }
+}
 .about-us__photo-image {
   display: block;
   max-width: 100%;
   height: auto;
+}
+@media (max-width: 576px) {
+  .about-us__photo-image {
+    width: 374px;
+  }
 }
 
 .advantages {

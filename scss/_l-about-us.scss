@@ -1,12 +1,20 @@
 .about-us {
   padding: 48px 0;
 
+  @include mobile {
+    padding: 12px 0;
+  }
+
   &__wrapper {
     position: relative;
     padding: 48px;
     overflow: hidden;
     border-radius: 32px;
     background: linear-gradient(180deg, #e1f0fa 25%, #8db9d6 100%);
+
+      @include laptop {
+        padding: 24px;
+      }
 
     &::before {
       content: '';
@@ -28,20 +36,45 @@
     z-index: 10;
 
     &-title {
+      position: absolute;
       margin: 0 0 -12px;
       font-family: 'Christopher', sans-serif;
       font-weight: 500;
       font-size: 84px;
       line-height: 100%;
       color: #4f0001;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &-heading {
+      display: block;
+      margin: 0;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        max-height: 65px;
+        height: auto;
+
+        @include mobile {
+          max-height: 38px;
+        }
+      }
     }
 
     &-description {
+      margin: 0 0 32px;
       padding-left: 32px;
       font-weight: 500;
       font-size: 22px;
       line-height: 110%;
       color: #282828;
+
+      @include mobile {
+        margin-bottom: 17px;
+        font-size: 15px;
+      }
     }
 
     &-advantages {
@@ -49,6 +82,14 @@
       flex-direction: column;
       gap: 12px;
       margin: 32px 0;
+
+      @include laptop {
+        margin: 16px 0 280px;
+      }
+
+      @include laptop {
+        margin-bottom: 150px;
+      }
 
       &-item {
         display: flex;
@@ -86,6 +127,10 @@
         transition-duration: 0.2s;
         cursor: pointer;
 
+        @include mobile {
+          width: 100%;
+        }
+
         &:hover {
           background-color: #9f322d;
         }
@@ -109,11 +154,21 @@
     max-width: 640px;
     margin: 0;
     overflow: hidden;
+    
+    @include laptop {
+      left: 0;
+      right: 0;
+      max-width: none;
+    }
 
     &-image {
       display: block;
       max-width: 100%;
       height: auto;
+
+      @include mobile {
+        width: 374px;
+      }
     }
   }
 }

@@ -40,6 +40,49 @@ if (headerControlsEl) {
   });
 }
 
+const menuButton = document.querySelector('.header__controls-menu');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+function openMobileMenu() {
+  if (menuButton && mobileMenu) {
+    menuButton.classList.add('active');
+    mobileMenu.classList.add('active');
+  }
+}
+
+function closeMobileMenu() {
+  if (menuButton && mobileMenu) {
+    menuButton.classList.remove('active');
+    mobileMenu.classList.remove('active');
+  }
+}
+
+closeMobileMenu();
+
+if (menuButton) {
+  menuButton.addEventListener('click', (event) => {
+    const isActive = event.currentTarget.classList.contains('active');
+    if (isActive) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  });
+}
+
+if (mobileMenu) {
+  mobileMenu.addEventListener('click', (event) => {
+    const isLayout = event.target === event.currentTarget;
+    const isLink = event.target.classList.contains('mobile-menu__nav-menu-item-link');
+    const isDownloadLink = event.target.classList.contains('mobile-menu__download-link');
+    const isSubscription = event.target.classList.contains('mobile-menu__subscription-button');
+
+    if (isLayout || isLink || isDownloadLink || isSubscription) {
+      closeMobileMenu();
+    }
+  });
+}
+
 // first-screen
 
 const firstScreenSwiperEl = document.querySelector('.first-screen .swiper');

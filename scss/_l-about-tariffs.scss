@@ -1,6 +1,10 @@
 .about-tariffs {
   padding: 48px 0;
 
+  @include mobile {
+    padding: 12px 0;
+  }
+
   &__heading {
     display: flex;
     align-items: flex-end;
@@ -10,20 +14,45 @@
 
     &-info {
       &-title {
+        position: absolute;
         margin: 0 0 -12px;
         font-family: 'Christopher', sans-serif;
         font-weight: 500;
         font-size: 84px;
         line-height: 100%;
         color: #4f0001;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      &-heading {
+        display: block;
+        margin: 0;
+
+        &-image {
+          display: block;
+          max-width: 100%;
+          max-height: 65px;
+          height: auto;
+
+          @include mobile {
+            max-height: 38px;
+          }
+        }
       }
 
       &-description {
+        margin: 0 0 32px;
         padding-left: 32px;
         font-weight: 500;
         font-size: 22px;
         line-height: 110%;
         color: #282828;
+
+        @include mobile {
+          margin-bottom: 17px;
+          font-size: 15px;
+        }
       }
     }
 
@@ -31,6 +60,10 @@
       display: flex;
       align-items: center;
       gap: 16px;
+
+      @include mobile {
+        display: none;
+      }
 
       &-prev,
       &-next {
@@ -206,10 +239,38 @@
     }
   }
 
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0 0 ;
+
+
+    & .swiper-pagination-bullet {
+      flex:  0 0 auto;
+      width: 12px;
+      height: 8px;
+      margin: 0 !important;
+      border-radius: 8px;
+      transition: width ease-out 0.2s;
+
+      &-active {
+        width: 28px;
+        background-color: #8f2d29;
+      }
+    }
+  }
+
   &__more {
     display: flex;
     justify-content: center;
     margin: 32px 0 0;
+
+    @include mobile {
+      display: none;
+    }
 
     &-link {
       display: inline-block;

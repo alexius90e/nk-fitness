@@ -88,6 +88,10 @@
       }
 
       @include laptop {
+        margin-bottom: 300px;
+      }
+
+      @include mobile {
         margin-bottom: 150px;
       }
 

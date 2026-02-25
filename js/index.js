@@ -79,12 +79,28 @@ servicesItemEls.forEach((servicesItem) => {
 const aboutTariffsSwiperEl = document.querySelector('.about-tariffs .swiper');
 const aboutTariffsPrevBtnEl = document.querySelector('.about-tariffs__heading-controls-prev');
 const aboutTariffsNextBtnEl = document.querySelector('.about-tariffs__heading-controls-next');
+const aboutTariffsPaginationEl = document.querySelector('.about-tariffs__pagination');
 
 if (aboutTariffsSwiperEl) {
   const aboutTariffsSwiper = new Swiper(aboutTariffsSwiperEl, {
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 24,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      577: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+    },
+    pagination: {
+      el: aboutTariffsPaginationEl,
+      clickable: true,
+    },
     navigation: {
       prevEl: aboutTariffsPrevBtnEl,
       nextEl: aboutTariffsNextBtnEl,

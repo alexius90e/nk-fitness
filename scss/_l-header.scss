@@ -4,13 +4,32 @@
   left: 0;
   right: 0;
   z-index: 99;
+  max-width: 100%;
+  overflow: hidden;
+
+  @include laptop {
+    top: 0;
+    padding: 12px;
+    border-radius: 0 0 32px 32px;
+    background: linear-gradient(180deg, #f2f8fd 0%, #e1f0fa 100%);
+  }
 
   &.header.hidden {
     position: fixed;
+    background: linear-gradient(
+      180deg,
+      rgba($color: #f2f8fd, $alpha: 0) 0%,
+      rgba($color: #e1f0fa, $alpha: 0) 100%
+    );
   }
 
   &.header.active {
     position: fixed;
+    background: linear-gradient(
+      180deg,
+      rgba($color: #f2f8fd, $alpha: 0) 0%,
+      rgba($color: #e1f0fa, $alpha: 0) 100%
+    );
   }
 
   &__wrapper {
@@ -20,6 +39,13 @@
     gap: 32px;
     margin: 0 auto;
     box-sizing: border-box;
+
+    @include laptop {
+      padding: 12px 24px;
+      margin: 0 -15px;
+      border-radius: 48px;
+      background-color: #fefefe;
+    }
   }
 
   &.hidden &__wrapper {
@@ -38,6 +64,11 @@
     transition-property: transform, opacity;
     transition-timing-function: ease-out;
     transition-duration: 0.4s;
+
+    @include laptop {
+      padding: 12px 24px;
+      border-radius: 48px;
+    }
   }
 
   &__logo {
@@ -53,15 +84,33 @@
         max-width: 100%;
         width: 180px;
         height: auto;
+
+        @include desktop {
+          width: 140px;
+        }
+
+        @include laptop {
+          width: 104px;
+          filter: brightness(0) saturate(100%) invert(2%) sepia(98%) saturate(5513%)
+            hue-rotate(336deg) brightness(97%) contrast(99%);
+        }
       }
     }
   }
 
   &.hidden.active &__logo {
     display: none;
+
+    @include laptop {
+      display: block;
+    }
   }
 
   &__nav {
+    @include laptop {
+      display: none;
+    }
+
     &-menu {
       display: flex;
       align-items: center;
@@ -70,6 +119,10 @@
       margin: 0;
       padding: 0;
       list-style-type: none;
+
+      @include desktop {
+        gap: 12px;
+      }
 
       &-item {
         flex: 0 0 auto;
@@ -91,6 +144,10 @@
           transition-duration: 0.2s;
           cursor: pointer;
 
+          @include desktop {
+            padding: 12px 16px;
+          }
+
           &:hover {
             background-color: #f2f8fd;
           }
@@ -109,6 +166,10 @@
     justify-content: center;
     flex: 0 0 auto;
     gap: 16px;
+
+    @include laptop {
+      gap: 6px;
+    }
 
     &-profile,
     &-login,
@@ -132,6 +193,10 @@
       transition-duration: 0.2s;
       cursor: pointer;
 
+      @include laptop {
+        display: none;
+      }
+
       &:hover {
         background-color: #f2f8fd;
       }
@@ -141,11 +206,21 @@
       }
     }
 
-    &-profile {
-      display: none;
+    &-profile,
+    &-notifications,
+    &-menu {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 0;
       width: 44px;
       aspect-ratio: 1;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 32px;
+      background-color: #fefefe;
+      cursor: pointer;
 
       &::before {
         content: '';
@@ -153,7 +228,58 @@
         flex: 0 0 auto;
         width: 22px;
         aspect-ratio: 1;
-        background: url(../assets/profile.svg) center / cover no-repeat;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &-notifications {
+      display: none;
+
+      @include laptop {
+        display: flex;
+      }
+
+      &::before {
+        background-image: url(../assets/bell.svg);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 9px;
+        right: 11px;
+        display: block;
+        width: 6px;
+        aspect-ratio: 1;
+        border: 2px solid #fefefe;
+        border-radius: 10px;
+        background-color: #8f2d29;
+      }
+    }
+
+    &-menu {
+      display: none;
+
+      @include laptop {
+        display: flex;
+      }
+
+      &::before {
+        background-image: url(../assets/menu.svg);
+      }
+    }
+
+    &-profile {
+      display: none;
+
+      @include laptop {
+        display: none;
+      }
+
+      &::before {
+        background-image: url(../assets/profile.svg);
       }
     }
 

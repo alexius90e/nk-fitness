@@ -1,16 +1,73 @@
 .atmosphere {
   padding: 48px 0;
 
+  @include mobile {
+    padding: 12px 0;
+  }
+
   &__wrapper {
     display: block;
+  }
+
+  &__title {
+    position: absolute;
+    margin: 0 0 -12px;
+    font-family: 'Christopher', sans-serif;
+    font-weight: 500;
+    font-size: 84px;
+    line-height: 100%;
+    color: #4f0001;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__heading {
+    display: block;
+    margin: 0;
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      max-height: 65px;
+      height: auto;
+
+      @include mobile {
+        max-height: 38px;
+      }
+    }
+  }
+
+  &__description {
+    margin: 0 0 32px;
+    padding-left: 32px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 110%;
+    color: #282828;
+
+    @include mobile {
+      margin-bottom: 17px;
+      font-size: 15px;
+    }
   }
 
   &__slider {
     & .swiper {
       &-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         left: 48px;
+        right: 48px;
         bottom: 32px;
-        width: fit-content;
+        width: auto;
+
+        @include mobile {
+          left: 16px;
+          right: 16px;
+          bottom: 16px;
+          justify-content: flex-end;
+        }
 
         &-bullet {
           display: inline-block;
@@ -52,6 +109,10 @@
           background: rgba(60, 63, 92, 0.2);
           backdrop-filter: blur(4px);
 
+          @include mobile {
+            display: none;
+          }
+
           &::before {
             content: '';
             display: block;
@@ -88,6 +149,15 @@
     border-radius: 32px;
     overflow: hidden;
     background-color: #282828;
+
+    @include laptop {
+      height: 360px;
+    }
+
+    @include mobile {
+      height: auto;
+      aspect-ratio: 336 / 176;
+    }
 
     &-iframe {
       width: 100%;
@@ -138,6 +208,11 @@
         transform: translate3d(-50%, -50%, 0);
         cursor: pointer;
 
+        @include mobile {
+          width: 48px;
+          height: 48px;
+        }
+
         &::before {
           content: '';
           display: block;
@@ -145,6 +220,10 @@
           aspect-ratio: 1;
           background: url(../assets/play.svg) center / cover no-repeat;
           transform: translateX(3px);
+
+          @include mobile {
+            width: 24px;
+          }
         }
       }
     }

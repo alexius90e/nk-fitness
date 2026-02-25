@@ -1266,7 +1266,13 @@ textarea {
 }
 
 .loyalty {
+  position: relative;
   padding: 48px 0;
+}
+@media (max-width: 576px) {
+  .loyalty {
+    padding: 12px 0;
+  }
 }
 .loyalty__wrapper {
   position: relative;
@@ -1285,6 +1291,14 @@ textarea {
   border-radius: 32px;
   background-color: #f4f4fb;
 }
+@media (max-width: 992px) {
+  .loyalty__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px;
+  }
+}
 .loyalty__info {
   position: relative;
   z-index: 10;
@@ -1293,12 +1307,30 @@ textarea {
           flex: 1 1 auto;
 }
 .loyalty__info-title {
+  position: absolute;
   margin: 0 0 -12px;
   font-family: "Christopher", sans-serif;
   font-weight: 500;
   font-size: 84px;
   line-height: 100%;
   color: #4f0001;
+  opacity: 0;
+  pointer-events: none;
+}
+.loyalty__info-heading {
+  display: block;
+  margin: 0;
+}
+.loyalty__info-heading-image {
+  display: block;
+  max-width: 100%;
+  max-height: 65px;
+  height: auto;
+}
+@media (max-width: 576px) {
+  .loyalty__info-heading-image {
+    max-height: 38px;
+  }
 }
 .loyalty__info-description {
   padding-left: 32px;
@@ -1306,6 +1338,12 @@ textarea {
   font-size: 22px;
   line-height: 110%;
   color: #282828;
+}
+@media (max-width: 576px) {
+  .loyalty__info-description {
+    margin-bottom: 17px;
+    font-size: 15px;
+  }
 }
 .loyalty__info-advantages {
   display: -webkit-box;
@@ -1317,6 +1355,11 @@ textarea {
           flex-direction: column;
   gap: 12px;
   margin: 32px 0;
+}
+@media (max-width: 768px) {
+  .loyalty__info-advantages {
+    margin: 16px 0;
+  }
 }
 .loyalty__info-advantages-item {
   display: -webkit-box;
@@ -1345,6 +1388,11 @@ textarea {
   line-height: 125%;
   color: #1c1c1c;
 }
+@media (max-width: 768px) {
+  .loyalty__info-text {
+    display: none;
+  }
+}
 .loyalty__info-download {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1352,6 +1400,11 @@ textarea {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 8px;
+}
+@media (max-width: 768px) {
+  .loyalty__info-download {
+    display: none;
+  }
 }
 .loyalty__info-download-link {
   display: -webkit-box;
@@ -1404,6 +1457,19 @@ textarea {
   border-radius: 32px;
   background: linear-gradient(334deg, #d3d2d2 18%, #9abdd9 86%);
 }
+@media (max-width: 992px) {
+  .loyalty__more {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    padding-top: 0;
+  }
+}
+@media (max-width: 576px) {
+  .loyalty__more {
+    min-height: 250px;
+  }
+}
 .loyalty__more-figure {
   position: absolute;
   top: 8px;
@@ -1412,6 +1478,21 @@ textarea {
   max-width: 452px;
   width: 452px;
   margin: 0;
+}
+@media (max-width: 992px) {
+  .loyalty__more-figure {
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+@media (max-width: 576px) {
+  .loyalty__more-figure {
+    top: auto;
+    bottom: 40px;
+    width: 300px;
+  }
 }
 .loyalty__more-figure-image {
   display: block;
@@ -1452,11 +1533,72 @@ textarea {
           transition-duration: 0.2s;
   cursor: pointer;
 }
+@media (max-width: 992px) {
+  .loyalty__more-about-link {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
 .loyalty__more-about-link:hover {
   background-color: #f2f8fd;
 }
 .loyalty__more-about-link:active {
   background-color: #e1f0fa;
+}
+.loyalty__download {
+  display: none;
+}
+@media (max-width: 768px) {
+  .loyalty__download {
+    display: block;
+  }
+}
+.loyalty__download-title {
+  margin: 0 0 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #1c1c1c;
+}
+.loyalty__download-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.loyalty__download-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  border: 2px solid #e1f0fa;
+  border-radius: 32px;
+  background-color: #fefefe;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  cursor: pointer;
+}
+.loyalty__download-link:hover {
+  background-color: #f2f8fd;
+}
+.loyalty__download-link:active {
+  background-color: #e1f0fa;
+}
+.loyalty__download-link-logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .all-clubs {
@@ -1597,7 +1739,7 @@ textarea {
   border-radius: 38px;
   background: url(../assets/gift-cards-bg.svg) center/cover no-repeat;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .gift-cards__wrapper {
     padding: 32px 24px 24px;
   }

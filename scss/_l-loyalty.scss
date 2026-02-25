@@ -1,5 +1,10 @@
 .loyalty {
+  position: relative;
   padding: 48px 0;
+
+  @include mobile {
+    padding: 12px 0;
+  }
 
   &__wrapper {
     position: relative;
@@ -11,6 +16,12 @@
     overflow: hidden;
     border-radius: 32px;
     background-color: #f4f4fb;
+
+    @include laptop {
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 24px;
+    }
   }
 
   &__info {
@@ -19,12 +30,31 @@
     flex: 1 1 auto;
 
     &-title {
+      position: absolute;
       margin: 0 0 -12px;
       font-family: 'Christopher', sans-serif;
       font-weight: 500;
       font-size: 84px;
       line-height: 100%;
       color: #4f0001;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &-heading {
+      display: block;
+      margin: 0;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        max-height: 65px;
+        height: auto;
+
+        @include mobile {
+          max-height: 38px;
+        }
+      }
     }
 
     &-description {
@@ -33,6 +63,11 @@
       font-size: 22px;
       line-height: 110%;
       color: #282828;
+
+      @include mobile {
+        margin-bottom: 17px;
+        font-size: 15px;
+      }
     }
 
     &-advantages {
@@ -40,6 +75,10 @@
       flex-direction: column;
       gap: 12px;
       margin: 32px 0;
+
+      @include tablet {
+        margin: 16px 0;
+      }
 
       &-item {
         display: flex;
@@ -66,12 +105,20 @@
       font-size: 16px;
       line-height: 125%;
       color: #1c1c1c;
+
+      @include tablet {
+        display: none;
+      }
     }
 
     &-download {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
+
+      @include tablet {
+        display: none;
+      }
 
       &-link {
         display: flex;
@@ -114,6 +161,15 @@
     border-radius: 32px;
     background: linear-gradient(334deg, #d3d2d2 18%, #9abdd9 86%);
 
+    @include laptop {
+      flex: 1 1 100%;
+      padding-top: 0;
+    }
+
+    @include mobile {
+      min-height: 250px;
+    }
+
     &-figure {
       position: absolute;
       top: 8px;
@@ -122,6 +178,18 @@
       max-width: 452px;
       width: 452px;
       margin: 0;
+
+      @include laptop {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+      }
+
+      @include mobile {
+        top: auto;
+        bottom: 40px;
+        width: 300px;
+      }
 
       &-image {
         display: block;
@@ -154,6 +222,11 @@
         transition-duration: 0.2s;
         cursor: pointer;
 
+        @include laptop {
+          max-width: 480px;
+          margin: 0 auto;
+        }
+
         &:hover {
           background-color: #f2f8fd;
         }
@@ -161,6 +234,55 @@
         &:active {
           background-color: #e1f0fa;
         }
+      }
+    }
+  }
+
+  &__download {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+
+    &-title {
+      margin: 0 0 16px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 125%;
+      color: #1c1c1c;
+    }
+
+    &-links {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border: 2px solid #e1f0fa;
+      border-radius: 32px;
+      background-color: #fefefe;
+      transition-property: background-color;
+      transition-timing-function: ease-out;
+      transition-duration: 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f2f8fd;
+      }
+
+      &:active {
+        background-color: #e1f0fa;
+      }
+
+      &-logo {
+        display: block;
+        max-width: 100%;
+        height: auto;
       }
     }
   }

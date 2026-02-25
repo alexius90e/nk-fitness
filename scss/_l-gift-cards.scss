@@ -15,7 +15,7 @@
     border-radius: 38px;
     background: url(../assets/gift-cards-bg.svg) center / cover no-repeat;
 
-    @include tablet {
+    @include laptop {
       padding: 32px 24px 24px;
     }
 

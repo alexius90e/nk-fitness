@@ -623,14 +623,14 @@ textarea {
       -ms-flex-pack: end;
           justify-content: flex-end;
   max-height: 100dvh;
-  padding: 102px 12px 12px;
+  padding: 102px 0 12px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   pointer-events: none;
 }
 @media (max-width: 1024px) {
   .notifications {
-    padding: 96px 12px 12px;
+    padding: 96px 0 12px;
   }
 }
 @media (max-width: 576px) {
@@ -642,6 +642,16 @@ textarea {
 }
 .notifications.active {
   pointer-events: all;
+}
+.notifications .custom-container {
+  display: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  padding: 0 12px;
 }
 .notifications__body {
   display: -webkit-box;

@@ -4,6 +4,12 @@
   overflow: hidden;
   background: url(../assets/gradients.svg) center / cover no-repeat;
 
+  @include laptop {
+    padding: 0;
+    margin: 100px 15px 12px;
+    border-radius: 32px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -12,8 +18,15 @@
     bottom: -190px;
     display: inline-block;
     width: 716px;
-    height: 668px;
+    aspect-ratio: 716 / 668;
     background: url(../assets/circles-bg.svg) center / cover no-repeat;
+
+    @include laptop {
+      left: auto;
+      right: -167px;
+      bottom: -230px;
+      width: 429px;
+    }
   }
 
   &__wrapper {
@@ -28,8 +41,20 @@
       bottom: 0;
       display: inline-block;
       width: 493px;
-      height: 739px;
+      aspect-ratio: 493 / 739;
       background: url(../assets/first-screen-girl.png) center / cover no-repeat;
+
+      @include desktop {
+        right: -120px;
+        width: 480px;
+      }
+
+      @include laptop {
+        top: 150px;
+        right: -30px;
+        width: 264px;
+        pointer-events: none;
+      }
     }
   }
 
@@ -40,6 +65,10 @@
     & .swiper {
       &-pagination {
         bottom: 50px;
+
+        @include laptop {
+          display: none;
+        }
 
         &-bullet {
           display: inline-block;
@@ -74,6 +103,11 @@
     padding: 160px 0;
     box-sizing: border-box;
 
+    @include laptop {
+      min-height: 500px;
+      padding: 32px 0;
+    }
+
     & * {
       user-select: none;
     }
@@ -81,19 +115,64 @@
     &-description {
       max-width: 604px;
       margin-left: 64px;
+      margin-bottom: 17px;
       font-weight: 500;
       font-size: 36px;
       line-height: 110%;
       color: #282828;
+
+      @include laptop {
+        max-width: 400px;
+        margin-left: 48px;
+        margin-bottom: 6px;
+        font-size: 24px;
+      }
+
+      @include tablet {
+        max-width: 320px;
+        font-size: 20px;
+      }
+
+      @include mobile {
+        max-width: 256px;
+        font-size: 16px;
+      }
     }
 
     &-title {
+      position: absolute;
       margin: 0 0 32px;
       font-family: 'Christopher', sans-serif;
       font-weight: 500;
       font-size: 184px;
       line-height: 100%;
       color: #4f0001;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &-heading {
+      display: block;
+      margin: 0 0 59px;
+
+      @include laptop {
+        margin-bottom: 22px;
+      }
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        max-height: 130px;
+        height: auto;
+
+        @include laptop {
+          max-height: 72px;
+        }
+
+        @include mobile {
+          max-height: 50px;
+        }
+      }
     }
 
     &-request {

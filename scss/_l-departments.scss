@@ -1,0 +1,145 @@
+.departments {
+  padding: 48px 0;
+
+  @include mobile {
+    padding: 12px 0;
+  }
+
+  &__wrapper {
+    display: block;
+  }
+
+  &__slides {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 396px;
+    padding: 32px 24px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 32px;
+    background-color: #3e3e3e;
+
+    @include tablet {
+      padding: 24px 16px;
+    }
+
+    &:nth-child(1),
+    &:nth-child(4) {
+      flex: 0 0 364px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      flex: 0 0 calc(100% - 364px - 24px);
+    }
+
+    &-photo {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+
+      &-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right;
+      }
+    }
+
+    &-info {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      @include mobile {
+        gap: 12px;
+      }
+
+      &-title {
+        margin: 0;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 125%;
+        color: #fefefe;
+
+        @include mobile {
+          font-size: 19px;
+        }
+      }
+
+      &-more {
+        &-link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          width: fit-content;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 125%;
+          color: #d8d9d8;
+
+          &::after {
+            content: '';
+            display: block;
+            flex: 0 0 auto;
+            width: 16px;
+            aspect-ratio: 1;
+            background: url(../assets/arrow-grey.svg);
+          }
+        }
+      }
+    }
+  }
+
+  &__slider {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+
+    &-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0 0;
+
+      & .swiper-pagination-bullet {
+        flex: 0 0 auto;
+        width: 12px;
+        height: 8px;
+        margin: 0 !important;
+        border-radius: 8px;
+        transition: width ease-out 0.2s;
+
+        &-active {
+          width: 28px;
+          background-color: #8f2d29;
+        }
+      }
+    }
+  }
+}

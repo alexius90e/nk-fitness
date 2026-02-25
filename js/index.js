@@ -259,3 +259,20 @@ if (loader) {
     loader.classList.remove('active');
   }, 2000);
 }
+
+// departments
+
+const departmentsSwiperEl = document.querySelector('.departments .swiper');
+const departmentsPaginationEl = document.querySelector('.departments__slider-pagination');
+
+if (departmentsSwiperEl) {
+  const departmentsSwiper = new Swiper(departmentsSwiperEl, {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 24,
+    pagination: {
+      el: departmentsPaginationEl,
+      clickable: true,
+    },
+  });
+}

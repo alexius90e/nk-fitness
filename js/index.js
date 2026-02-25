@@ -43,29 +43,36 @@ if (headerControlsEl) {
 const menuButton = document.querySelector('.header__controls-menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 
-function openMobileMenu() {
-  if (menuButton && mobileMenu) {
-    menuButton.classList.add('active');
-    mobileMenu.classList.add('active');
+const notificationsButton = document.querySelector('.header__controls-notifications');
+const notificationsMenu = document.querySelector('.notifications');
+
+function openMenu(buttonEl, menuEl) {
+  if (buttonEl && menuEl) {
+    buttonEl.classList.add('active');
+    menuEl.classList.add('active');
+    document.body.style.overflow = 'hidden';
   }
 }
 
-function closeMobileMenu() {
-  if (menuButton && mobileMenu) {
-    menuButton.classList.remove('active');
-    mobileMenu.classList.remove('active');
+function closeMenu(buttonEl, menuEl) {
+  if (buttonEl && menuEl) {
+    buttonEl.classList.remove('active');
+    menuEl.classList.remove('active');
+    document.body.style.overflow = null;
   }
 }
 
-closeMobileMenu();
+closeMenu(menuButton, mobileMenu);
+closeMenu(notificationsButton, notificationsMenu);
 
 if (menuButton) {
   menuButton.addEventListener('click', (event) => {
     const isActive = event.currentTarget.classList.contains('active');
-    if (isActive) {
-      closeMobileMenu();
+    if (!isActive) {
+      closeMenu(notificationsButton, notificationsMenu);
+      openMenu(menuButton, mobileMenu);
     } else {
-      openMobileMenu();
+      closeMenu(menuButton, mobileMenu);
     }
   });
 }
@@ -78,7 +85,29 @@ if (mobileMenu) {
     const isSubscription = event.target.classList.contains('mobile-menu__subscription-button');
 
     if (isLayout || isLink || isDownloadLink || isSubscription) {
-      closeMobileMenu();
+      closeMenu(menuButton, mobileMenu);
+    }
+  });
+}
+
+if (notificationsButton) {
+  notificationsButton.addEventListener('click', (event) => {
+    const isActive = event.currentTarget.classList.contains('active');
+    if (!isActive) {
+      closeMenu(menuButton, mobileMenu);
+      openMenu(notificationsButton, notificationsMenu);
+    } else {
+      closeMenu(notificationsButton, notificationsMenu);
+    }
+  });
+}
+
+if (notificationsMenu) {
+  notificationsMenu.addEventListener('click', (event) => {
+    const isLayout = event.target === event.currentTarget;
+
+    if (isLayout) {
+      closeMenu(notificationsButton, notificationsMenu);
     }
   });
 }

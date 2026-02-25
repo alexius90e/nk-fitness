@@ -256,6 +256,19 @@
         border: 2px solid #fefefe;
         border-radius: 10px;
         background-color: #8f2d29;
+        display: none;
+      }
+
+      &.is-notified::after {
+        display: block;
+      }
+
+      &.active::before {
+        background-image: url(../assets/close.svg);
+      }
+
+      &.active::after {
+        display: none;
       }
     }
 
@@ -285,6 +298,10 @@
       &::before {
         background-image: url(../assets/profile.svg);
       }
+    }
+
+    &_logged &-notifications {
+      display: flex;
     }
 
     &_logged &-profile {

@@ -41,9 +41,9 @@
 
           <div class="header__controls">
             <button class="header__controls-profile"></button>
+            <button class="header__controls-notifications is-notified"></button>
             <button class="header__controls-login">Войти</button>
             <button class="header__controls-buy">Купить абонемент</button>
-            <button class="header__controls-notifications active"></button>
             <button class="header__controls-menu"></button>
           </div>
         </div>
@@ -130,6 +130,56 @@
           <div class="mobile-menu__subscription">
             <button class="mobile-menu__subscription-button">Купить абонемент</button>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notifications">
+      <div class="notifications__body">
+        <div class="notifications__content">
+          <div class="notifications__empty">Тут пока пусто</div>
+
+          <ul class="notifications__list">
+            <li class="notifications__list-item notifications__list-item__new">
+              <div class="notifications__list-item-title">Тренировка через 1 час</div>
+              <div class="notifications__list-item-text">
+                Групповая тренировка Суставная гимнастика начнётся через 1 час
+              </div>
+              <div class="notifications__list-item-date">05 фев 17:00</div>
+            </li>
+
+            <li class="notifications__list-item notifications__list-item__new">
+              <div class="notifications__list-item-title">Тренировка завтра в 18:00</div>
+              <div class="notifications__list-item-text">
+                Групповая тренировка BUMS + ABS завтра в 18:00
+              </div>
+              <div class="notifications__list-item-date">04 фев 19:00</div>
+            </li>
+
+            <li class="notifications__list-item">
+              <div class="notifications__list-item-title">Тренировка через 1 час</div>
+              <div class="notifications__list-item-text">
+                Групповая тренировка Суставная гимнастика начнётся через 1 час
+              </div>
+              <div class="notifications__list-item-date">05 фев 17:00</div>
+            </li>
+
+            <li class="notifications__list-item">
+              <div class="notifications__list-item-title">Тренировка завтра в 18:00</div>
+              <div class="notifications__list-item-text">
+                Групповая тренировка BUMS + ABS завтра в 18:00
+              </div>
+              <div class="notifications__list-item-date">04 фев 19:00</div>
+            </li>
+
+            <li class="notifications__list-item">
+              <div class="notifications__list-item-title">Тренировка через 1 час</div>
+              <div class="notifications__list-item-text">
+                Групповая тренировка Суставная гимнастика начнётся через 1 час
+              </div>
+              <div class="notifications__list-item-date">05 фев 17:00</div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -1383,7 +1433,7 @@
       </div>
     </footer>
 
-    <div class="cookies active" style="display: none">
+    <div class="cookies active">
       <figure class="cookies__icon">
         <img class="cookies__icon-image" src="./assets/cookies.svg" alt="cookies" />
       </figure>
@@ -1397,7 +1447,7 @@
       </div>
     </div>
 
-    <div class="loader" style="display: none">
+    <div class="loader">
       <div class="loader__main">
         <svg
           class="loader__main-layer loader__main-layer_outer"

@@ -180,6 +180,22 @@ if (aboutTariffsSwiperEl) {
   });
 }
 
+const aboutTariffsInfoEls = document.querySelectorAll('.about-tariffs__slide-services-item-info');
+const aboutTariffsEl = document.querySelector('.about-tariffs');
+
+if (aboutTariffsEl) {
+  aboutTariffsEl.addEventListener('click', (event) => {
+    const isInfoButton = event.target.classList.contains(
+      'about-tariffs__slide-services-item-info-button',
+    );
+    aboutTariffsInfoEls.forEach((el) => el.classList.remove('active'));
+    if (isInfoButton) {
+      const parentEl = event.target.closest('.about-tariffs__slide-services-item-info');
+      parentEl.classList.add('active');
+    }
+  });
+}
+
 // atmosphere
 
 const atmosphereSwiperEl = document.querySelector('.atmosphere .swiper');

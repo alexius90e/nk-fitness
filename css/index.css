@@ -1490,9 +1490,56 @@ textarea {
   color: #282828;
 }
 .about-tariffs__slide-services-item-info {
+  position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+}
+.about-tariffs__slide-services-item-info::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  display: block;
+  display: none;
+}
+.about-tariffs__slide-services-item-info.active::before {
+  display: block;
+}
+.about-tariffs__slide-services-item-info-label {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 8px);
+  display: block;
+  padding: 4px 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 125%;
+  color: #282828;
+  border-radius: 4px;
+  background-color: #fefefe;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity ease-out 0.2s;
+  transition: opacity ease-out 0.2s;
+}
+.about-tariffs__slide-services-item-info-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  height: 9px;
+  width: 4px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(../assets/ending-vert-right.svg) center/cover no-repeat;
+}
+.about-tariffs__slide-services-item-info.active .about-tariffs__slide-services-item-info-label {
+  opacity: 1;
+  pointer-events: all;
 }
 .about-tariffs__slide-services-item-info-button {
   display: block;

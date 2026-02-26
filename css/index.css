@@ -1495,16 +1495,6 @@ textarea {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
 }
-.about-tariffs__slide-services-item-info::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  display: block;
-  display: none;
-}
-.about-tariffs__slide-services-item-info.active::before {
-  display: block;
-}
 .about-tariffs__slide-services-item-info-label {
   position: absolute;
   top: 50%;

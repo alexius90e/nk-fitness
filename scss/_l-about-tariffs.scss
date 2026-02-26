@@ -202,19 +202,7 @@
         &-info {
           position: relative;
           flex: 0 0 auto;
-
-          &::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            display: block;
-            display: none;
-          }
-
-          &.active::before {
-            display: block;
-          }
-
+          
           &-label {
             position: absolute;
             top: 50%;

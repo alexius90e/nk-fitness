@@ -202,12 +202,14 @@
         &-info {
           position: relative;
           flex: 0 0 auto;
-          
+
           &-label {
             position: absolute;
             top: 50%;
             right: calc(100% + 8px);
             display: block;
+            max-width: 240px;
+            width: max-content;
             padding: 4px 12px;
             box-sizing: border-box;
             font-weight: 400;

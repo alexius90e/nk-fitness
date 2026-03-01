@@ -821,6 +821,10 @@ textarea {
   display: none;
 }
 
+.main {
+  display: block;
+}
+
 body:has(.header_fullfilled) .main {
   padding-top: 126px;
 }
@@ -1283,6 +1287,212 @@ body:has(.header_fullfilled) .main {
 .services__item.active .services__item-details {
   opacity: 1;
   pointer-events: all;
+}
+
+.services-list {
+  padding: 48px 0;
+}
+@media (max-width: 576px) {
+  .services-list {
+    padding: 12px 0;
+  }
+}
+.services-list__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+}
+.services-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(33.3333333333% - 16px);
+          flex: 0 0 calc(33.3333333333% - 16px);
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  gap: 32px;
+  padding: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 32px;
+}
+@media (max-width: 1024px) {
+  .services-list__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 12px);
+            flex: 0 0 calc(50% - 12px);
+  }
+}
+@media (max-width: 768px) {
+  .services-list__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+.services-list__item_primary {
+  padding-bottom: 32px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#f3f4fb));
+  background: linear-gradient(180deg, #f7f7f7 0%, #f3f4fb 100%);
+}
+.services-list__item_secondary {
+  padding-top: 32px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #e1f0fa), to(#8db9d6));
+  background: linear-gradient(180deg, #e1f0fa 25%, #8db9d6 100%);
+}
+.services-list__item-figure {
+  margin: 0;
+}
+.services-list__item-figure-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 28px;
+}
+.services-list__item_primary .services-list__item-figure {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+}
+.services-list__item_secondary .services-list__item-figure {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+.services-list__item-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  padding: 0 16px;
+}
+.services-list__item-info-title {
+  margin: 0 0 16px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: #282828;
+}
+.services-list__item-info-description {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #282828;
+}
+.services-list__item_primary .services-list__item-info {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+.services-list__item_secondary .services-list__item-info {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+}
+.services-list__slider {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(66.6666666667% - 12px);
+          flex: 0 0 calc(66.6666666667% - 12px);
+  max-width: calc(66.6666666667% - 12px);
+  -webkit-box-ordinal-group: 101;
+      -ms-flex-order: 100;
+          order: 100;
+}
+@media (max-width: 1024px) {
+  .services-list__slider {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .services-list__slider {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+.services-list__slider-title {
+  position: absolute;
+  left: 32px;
+  bottom: 24px;
+  z-index: 99;
+  max-width: calc(100% - 64px - 160px);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 125%;
+  color: #fefefe;
+}
+@media (max-width: 576px) {
+  .services-list__slider-title {
+    left: 16px;
+    bottom: 20px;
+    font-size: 17px;
+  }
+}
+.services-list__slider .swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  left: auto;
+  right: 32px;
+  bottom: 24px;
+  max-width: 160px;
+  width: auto;
+}
+@media (max-width: 576px) {
+  .services-list__slider .swiper-pagination {
+    right: 16px;
+    bottom: 20px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+.services-list__slider .swiper-pagination-bullet {
+  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin: 0 6px !important;
+  width: 12px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: #d8d9d8;
+  opacity: 1;
+  -webkit-transition-property: width, background-color;
+  transition-property: width, background-color;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+.services-list__slider .swiper-pagination-bullet-active {
+  width: 28px;
+  background-color: #fefefe;
+}
+.services-list__slider-slide {
+  margin: 0;
+}
+.services-list__slider-slide-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 32px;
 }
 
 .about-tariffs {
@@ -4128,6 +4338,151 @@ body:has(.header_fullfilled) .main {
 .departments__slider-pagination .swiper-pagination-bullet-active {
   width: 28px;
   background-color: #8f2d29;
+}
+
+.sport-club {
+  padding: 48px 0;
+}
+@media (max-width: 576px) {
+  .sport-club {
+    padding: 12px 0;
+  }
+}
+.sport-club__wrapper {
+  padding: 48px;
+  border-radius: 32px;
+  background: url(../assets/circles-bg.svg) top -200px right -200px/410px no-repeat;
+  background-color: #f4f4fb;
+}
+@media (max-width: 576px) {
+  .sport-club__wrapper {
+    padding: 0;
+    background: none;
+  }
+}
+.sport-club__title {
+  position: absolute;
+  margin: 0 0 -12px;
+  font-family: "Christopher", sans-serif;
+  font-weight: 500;
+  font-size: 84px;
+  line-height: 100%;
+  color: #4f0001;
+  opacity: 0;
+  pointer-events: none;
+}
+.sport-club__heading {
+  display: block;
+  margin: 0;
+}
+.sport-club__heading-image {
+  display: block;
+  max-width: 100%;
+  max-height: 65px;
+  height: auto;
+}
+@media (max-width: 576px) {
+  .sport-club__heading-image {
+    max-height: 38px;
+  }
+}
+.sport-club__description {
+  margin: 0 0 32px;
+  padding-left: 32px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 110%;
+  color: #282828;
+}
+@media (max-width: 576px) {
+  .sport-club__description {
+    margin-bottom: 17px;
+    font-size: 15px;
+  }
+}
+.sport-club__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 32px;
+}
+@media (max-width: 1024px) {
+  .sport-club__info {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.sport-club__info-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 608px;
+          flex: 1 1 608px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+@media (max-width: 1024px) {
+  .sport-club__info-content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+@media (max-width: 576px) {
+  .sport-club__info-content {
+    padding: 24px;
+    border-radius: 32px;
+    background-color: #f4f4fb;
+  }
+}
+.sport-club__info-content-paragraph {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #1c1c1c;
+}
+.sport-club__info-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 405px;
+          flex: 1 1 405px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+}
+@media (max-width: 1024px) {
+  .sport-club__info-tags {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+@media (max-width: 576px) {
+  .sport-club__info-tags {
+    display: none;
+  }
+}
+.sport-club__info-tags-item {
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #282828;
+  border: 2px solid #68acd9;
+  border-radius: 32px;
 }
 
 .not-found {

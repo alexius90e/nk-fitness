@@ -146,6 +146,25 @@ servicesItemEls.forEach((servicesItem) => {
   });
 });
 
+
+// services list
+
+const servicesListSwiperEl = document.querySelector('.services-list .swiper');
+
+console.log(servicesListSwiperEl);
+
+if (servicesListSwiperEl) {
+  const servicesListSwiper = new Swiper(servicesListSwiperEl, {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 24,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+}
+
 // about-tariffs
 
 const aboutTariffsSwiperEl = document.querySelector('.about-tariffs .swiper');

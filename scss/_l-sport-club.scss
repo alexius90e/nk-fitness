@@ -1,0 +1,122 @@
+.sport-club {
+  padding: 48px 0;
+
+  @include mobile {
+    padding: 12px 0;
+  }
+
+  &__wrapper {
+    padding: 48px;
+    border-radius: 32px;
+    background: url(../assets/circles-bg.svg) top -200px right -200px / 410px no-repeat;
+    background-color: #f4f4fb;
+
+    @include mobile {
+      padding: 0;
+      background: none;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    margin: 0 0 -12px;
+    font-family: 'Christopher', sans-serif;
+    font-weight: 500;
+    font-size: 84px;
+    line-height: 100%;
+    color: #4f0001;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__heading {
+    display: block;
+    margin: 0;
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      max-height: 65px;
+      height: auto;
+
+      @include mobile {
+        max-height: 38px;
+      }
+    }
+  }
+
+  &__description {
+    margin: 0 0 32px;
+    padding-left: 32px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 110%;
+    color: #282828;
+
+    @include mobile {
+      margin-bottom: 17px;
+      font-size: 15px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-end;
+    gap: 32px;
+
+    @include laptop {
+      flex-wrap: wrap;
+    }
+
+    &-content {
+      display: flex;
+      flex: 1 1 608px;
+      flex-direction: column;
+      gap: 16px;
+
+      @include laptop {
+        flex: 1 1 100%;
+      }
+
+      @include mobile {
+        padding: 24px;
+        border-radius: 32px;
+        background-color: #f4f4fb;
+      }
+
+      &-paragraph {
+        margin: 0;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: #1c1c1c;
+      }
+    }
+
+    &-tags {
+      display: flex;
+      align-items: center;
+      flex: 1 1 405px;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      @include laptop {
+        flex: 1 1 100%;
+      }
+
+      @include mobile {
+        display: none;
+      }
+
+      &-item {
+        padding: 12px 24px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: #282828;
+        border: 2px solid #68acd9;
+        border-radius: 32px;
+      }
+    }
+  }
+}

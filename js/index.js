@@ -146,7 +146,6 @@ servicesItemEls.forEach((servicesItem) => {
   });
 });
 
-
 // services list
 
 const servicesListSwiperEl = document.querySelector('.services-list .swiper');
@@ -381,5 +380,55 @@ if (departmentsSwiperEl) {
       el: departmentsPaginationEl,
       clickable: true,
     },
+  });
+}
+
+// tariffs
+
+const tariffsMenuButtons = document.querySelectorAll('.tariffs__menu-item-button');
+const tariffsCards = document.querySelectorAll('.tariffs__card');
+
+function showAllTariffsCard() {
+  tariffsCards.forEach((card) => card.classList.add('active'));
+}
+
+function showTariffsCards(target) {
+  tariffsCards.forEach((card) => {
+    if (target === 'all') {
+      card.classList.add('active');
+    } else if (card.dataset.card === target) {
+      card.classList.add('active');
+    } else {
+      card.classList.remove('active');
+    }
+  });
+}
+
+function hideAllTariffsCard() {
+  tariffsCards.forEach((card) => card.classList.remove('active'));
+}
+
+tariffsMenuButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    tariffsMenuButtons.forEach((button) => button.classList.remove('active'));
+    button.classList.add('active');
+    showTariffsCards(button.dataset.target);
+  });
+});
+
+const activeTariffsMenuButton = document.querySelector('.tariffs__menu-item-button.active');
+if (activeTariffsMenuButton) {
+  showTariffsCards(activeTariffsMenuButton.dataset.target);
+}
+
+const tariffsMoreEl = document.querySelector('.tariffs__more');
+const tariffsCardsEl = document.querySelector('.tariffs__cards');
+
+if (tariffsMoreEl) {
+  tariffsMoreEl.addEventListener('click', (event) => {
+    const isButton = event.target.classList.contains('tariffs__more-button');
+    if (isButton) {
+      tariffsCardsEl.classList.add('visible');
+    }
   });
 }

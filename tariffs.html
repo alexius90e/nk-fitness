@@ -187,193 +187,317 @@
     </div>
 
     <main class="main">
-      <section class="faq">
+      <section class="tariffs">
         <div class="custom-container">
-          <h2 class="faq__title">Вопросы и ответы</h2>
+          <h2 class="tariffs__title">Выбирай</h2>
 
-          <figure class="faq__heading">
-            <img class="faq__heading-image" src="./assets/heading/heading-faq.svg" alt="heading" />
+          <figure class="tariffs__heading">
+            <img
+              class="tariffs__heading-image"
+              src="./assets/heading/heading-tariffs.svg"
+              alt="heading"
+            />
           </figure>
 
-          <div class="faq__description">ответы на частые вопросы</div>
+          <div class="tariffs__description">свой тариф фитнеса</div>
 
-          <ul class="faq__menu">
-            <li class="faq__menu-item">
-              <button class="faq__menu-item-button active" data-target="tariffs">Тарифы</button>
+          <ul class="tariffs__menu">
+            <li class="tariffs__menu-item">
+              <button class="tariffs__menu-item-button active" data-target="all">Все</button>
             </li>
-            <li class="faq__menu-item">
-              <button class="faq__menu-item-button" data-target="payment">Оплата</button>
+            <li class="tariffs__menu-item">
+              <button class="tariffs__menu-item-button" data-target="bezlimit">Безлимит</button>
             </li>
-            <li class="faq__menu-item">
-              <button class="faq__menu-item-button" data-target="training">Тренировки</button>
+            <li class="tariffs__menu-item">
+              <button class="tariffs__menu-item-button" data-target="po-poseshcheniyam">
+                По посещениям
+              </button>
             </li>
-            <li class="faq__menu-item">
-              <button class="faq__menu-item-button" data-target="other">Другое</button>
+            <li class="tariffs__menu-item">
+              <button class="tariffs__menu-item-button" data-target="personalnye">Персональные</button>
+            </li>
+            <li class="tariffs__menu-item">
+              <button class="tariffs__menu-item-button" data-target="semejnye">Семейные</button>
             </li>
           </ul>
 
-          <div class="faq__wrappper">
-            <div class="faq__block" data-block="tariffs">
-              <div class="faq__item">
-                <div class="faq__item-toggler">Как заморозить абонемент?</div>
-                <div class="faq__item-panel">
-                  <div class="faq__item-panel-content">
-                    С тарифом Лайт ты получишь все преимущества самого популярного тарифа: посещения
-                    бассейна, тренажерного зала и групповых тренировок в одном из лучших клубов
-                    Хабаровска.
-                  </div>
-                </div>
-              </div>
+          <div class="tariffs__cards">
+            <div class="tariffs__card tariffs__card_light" data-card="bezlimit">
+              <h3 class="tariffs__card-title">Тариф Лайт</h3>
 
-              <div class="faq__item active">
-                <div class="faq__item-toggler">Что входит в тариф Лайт?</div>
-                <div class="faq__item-panel">
-                  <div class="faq__item-panel-content">
-                    С тарифом Лайт ты получишь все преимущества самого популярного тарифа: посещения
-                    бассейна, тренажерного зала и групповых тренировок в одном из лучших клубов
-                    Хабаровска.
+              <ul class="tariffs__card-services">
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">
+                    Безлимитный доступ в один выбранный клуб
                   </div>
-                </div>
-              </div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">Бесплатное занятие с тренером</div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">10+ групповых тренировок</div>
+                </li>
+                <li class="tariffs__card-services-item">
+                  <div class="tariffs__card-services-item-name">Спа зона</div>
+                </li>
+                <li class="tariffs__card-services-item">
+                  <div class="tariffs__card-services-item-name">Занятия с тренером</div>
+                  <div class="tariffs__card-services-item-info">
+                    <button class="tariffs__card-services-item-info-button"></button>
+                    <div class="tariffs__card-services-item-info-label">Занятия с тренером</div>
+                  </div>
+                </li>
+                <li class="tariffs__card-services-item">
+                  <div class="tariffs__card-services-item-name">Бассейн</div>
+                </li>
+                <li class="tariffs__card-services-item">
+                  <div class="tariffs__card-services-item-name">Гостевой доступ</div>
+                  <div class="tariffs__card-services-item-info">
+                    <button class="tariffs__card-services-item-info-button"></button>
+                    <div class="tariffs__card-services-item-info-label">Гостевой доступ</div>
+                  </div>
+                </li>
+              </ul>
 
-              <div class="faq__item">
-                <div class="faq__item-toggler">Можно ли продлить абонемент?</div>
-                <div class="faq__item-panel">
-                  <div class="faq__item-panel-content">
-                    С тарифом Лайт ты получишь все преимущества самого популярного тарифа: посещения
-                    бассейна, тренажерного зала и групповых тренировок в одном из лучших клубов
-                    Хабаровска.
-                  </div>
-                </div>
-              </div>
+              <div class="tariffs__card-price">1 200 ₽ / месяц</div>
 
-              <div class="faq__item">
-                <div class="faq__item-toggler">Как оформить гостевой визит?</div>
-                <div class="faq__item-panel">
-                  <div class="faq__item-panel-content">
-                    С тарифом Лайт ты получишь все преимущества самого популярного тарифа: посещения
-                    бассейна, тренажерного зала и групповых тренировок в одном из лучших клубов
-                    Хабаровска.
-                  </div>
-                </div>
-              </div>
-
-              <div class="faq__item">
-                <div class="faq__item-toggler">Какие доп. услуги есть в фитнес клубах?</div>
-                <div class="faq__item-panel">
-                  <div class="faq__item-panel-content">
-                    С тарифом Лайт ты получишь все преимущества самого популярного тарифа: посещения
-                    бассейна, тренажерного зала и групповых тренировок в одном из лучших клубов
-                    Хабаровска.
-                  </div>
-                </div>
+              <div class="tariffs__card-buy">
+                <button class="tariffs__card-buy-button">Оформить</button>
               </div>
             </div>
 
-            <div class="faq__block" data-block="payment">
-              <div class="faq__item">
-                <div class="faq__item-toggler">Вопрос про оплату #1?</div>
-                <div class="faq__item-panel">
-                  <div class="faq__item-panel-content">
-                    С тарифом Лайт ты получишь все преимущества самого популярного тарифа: посещения
-                    бассейна, тренажерного зала и групповых тренировок в одном из лучших клубов
-                    Хабаровска.
-                  </div>
-                </div>
-              </div>
+            <div class="tariffs__card tariffs__card_smart" data-card="po-poseshcheniyam">
+              <h3 class="tariffs__card-title">Тариф Смарт</h3>
 
-              <div class="faq__item">
-                <div class="faq__item-toggler">Вопрос про оплату #2?</div>
-                <div class="faq__item-panel">
-                  <div class="faq__item-panel-content">
-                    С тарифом Лайт ты получишь все преимущества самого популярного тарифа: посещения
-                    бассейна, тренажерного зала и групповых тренировок в одном из лучших клубов
-                    Хабаровска.
-                  </div>
-                </div>
-              </div>
+              <div class="tariffs__card-discount">-15%</div>
 
-              <div class="faq__item">
-                <div class="faq__item-toggler">Вопрос про оплату #3?</div>
-                <div class="faq__item-panel">
-                  <div class="faq__item-panel-content">
-                    С тарифом Лайт ты получишь все преимущества самого популярного тарифа: посещения
-                    бассейна, тренажерного зала и групповых тренировок в одном из лучших клубов
-                    Хабаровска.
+              <ul class="tariffs__card-services">
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">
+                    Безлимитный доступ в один выбранный клуб
                   </div>
-                </div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">Бесплатное занятие с тренером</div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">10+ групповых тренировок</div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">Спа зона</div>
+                </li>
+                <li class="tariffs__card-services-item">
+                  <div class="tariffs__card-services-item-name">Занятия с тренером</div>
+                  <div class="tariffs__card-services-item-info">
+                    <button class="tariffs__card-services-item-info-button"></button>
+                    <div class="tariffs__card-services-item-info-label">Занятия с тренером</div>
+                  </div>
+                </li>
+                <li class="tariffs__card-services-item">
+                  <div class="tariffs__card-services-item-name">Бассейн</div>
+                </li>
+                <li class="tariffs__card-services-item">
+                  <div class="tariffs__card-services-item-name">Гостевой доступ</div>
+                  <div class="tariffs__card-services-item-info">
+                    <button class="tariffs__card-services-item-info-button"></button>
+                    <div class="tariffs__card-services-item-info-label">Гостевой доступ</div>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="tariffs__card-price">2 400 ₽ / месяц</div>
+
+              <div class="tariffs__card-buy">
+                <button class="tariffs__card-buy-button">Оформить</button>
               </div>
             </div>
 
-            <div class="faq__block" data-block="training">
-              <div class="faq__item">
-                <div class="faq__item-toggler">Вопрос про тренировки #1?</div>
-                <div class="faq__item-panel">
-                  <div class="faq__item-panel-content">
-                    С тарифом Лайт ты получишь все преимущества самого популярного тарифа: посещения
-                    бассейна, тренажерного зала и групповых тренировок в одном из лучших клубов
-                    Хабаровска.
-                  </div>
-                </div>
-              </div>
+            <div class="tariffs__card tariffs__card_pro" data-card="personalnye">
+              <h3 class="tariffs__card-title">Тариф Про</h3>
 
-              <div class="faq__item">
-                <div class="faq__item-toggler">Вопрос про тренировки #2?</div>
-                <div class="faq__item-panel">
-                  <div class="faq__item-panel-content">
-                    С тарифом Лайт ты получишь все преимущества самого популярного тарифа: посещения
-                    бассейна, тренажерного зала и групповых тренировок в одном из лучших клубов
-                    Хабаровска.
-                  </div>
-                </div>
-              </div>
+              <div class="tariffs__card-discount">-15%</div>
 
-              <div class="faq__item">
-                <div class="faq__item-toggler">Вопрос про тренировки #3?</div>
-                <div class="faq__item-panel">
-                  <div class="faq__item-panel-content">
-                    С тарифом Лайт ты получишь все преимущества самого популярного тарифа: посещения
-                    бассейна, тренажерного зала и групповых тренировок в одном из лучших клубов
-                    Хабаровска.
+              <ul class="tariffs__card-services">
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">
+                    Безлимитный доступ в один выбранный клуб
                   </div>
-                </div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">Бесплатное занятие с тренером</div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">10+ групповых тренировок</div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">Спа зона</div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">Занятия с тренером</div>
+                  <div class="tariffs__card-services-item-info active">
+                    <button class="tariffs__card-services-item-info-button"></button>
+                    <div class="tariffs__card-services-item-info-label">Занятия с тренером</div>
+                  </div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">Бассейн</div>
+                </li>
+                <li class="tariffs__card-services-item">
+                  <div class="tariffs__card-services-item-name">Гостевой доступ</div>
+                  <div class="tariffs__card-services-item-info">
+                    <button class="tariffs__card-services-item-info-button"></button>
+                    <div class="tariffs__card-services-item-info-label">Гостевой доступ</div>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="tariffs__card-price">3 600 ₽ / месяц</div>
+
+              <div class="tariffs__card-buy">
+                <button class="tariffs__card-buy-button">Оформить</button>
               </div>
             </div>
 
-            <div class="faq__block" data-block="other">
-              <div class="faq__item">
-                <div class="faq__item-toggler">Вопрос про другое #1?</div>
-                <div class="faq__item-panel">
-                  <div class="faq__item-panel-content">
-                    С тарифом Лайт ты получишь все преимущества самого популярного тарифа: посещения
-                    бассейна, тренажерного зала и групповых тренировок в одном из лучших клубов
-                    Хабаровска.
-                  </div>
-                </div>
-              </div>
+            <div class="tariffs__card tariffs__card_smart" data-card="semejnye">
+              <h3 class="tariffs__card-title">Тариф Смарт</h3>
 
-              <div class="faq__item">
-                <div class="faq__item-toggler">Вопрос про другое #2?</div>
-                <div class="faq__item-panel">
-                  <div class="faq__item-panel-content">
-                    С тарифом Лайт ты получишь все преимущества самого популярного тарифа: посещения
-                    бассейна, тренажерного зала и групповых тренировок в одном из лучших клубов
-                    Хабаровска.
-                  </div>
-                </div>
-              </div>
+              <div class="tariffs__card-discount">-15%</div>
 
-              <div class="faq__item">
-                <div class="faq__item-toggler">Вопрос про другое #3?</div>
-                <div class="faq__item-panel">
-                  <div class="faq__item-panel-content">
-                    С тарифом Лайт ты получишь все преимущества самого популярного тарифа: посещения
-                    бассейна, тренажерного зала и групповых тренировок в одном из лучших клубов
-                    Хабаровска.
+              <ul class="tariffs__card-services">
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">
+                    Безлимитный доступ в один выбранный клуб
                   </div>
-                </div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">Бесплатное занятие с тренером</div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">10+ групповых тренировок</div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">Спа зона</div>
+                </li>
+                <li class="tariffs__card-services-item">
+                  <div class="tariffs__card-services-item-name">Занятия с тренером</div>
+                  <div class="tariffs__card-services-item-info">
+                    <button class="tariffs__card-services-item-info-button"></button>
+                    <div class="tariffs__card-services-item-info-label">Занятия с тренером</div>
+                  </div>
+                </li>
+                <li class="tariffs__card-services-item">
+                  <div class="tariffs__card-services-item-name">Бассейн</div>
+                </li>
+                <li class="tariffs__card-services-item">
+                  <div class="tariffs__card-services-item-name">Гостевой доступ</div>
+                  <div class="tariffs__card-services-item-info">
+                    <button class="tariffs__card-services-item-info-button"></button>
+                    <div class="tariffs__card-services-item-info-label">Гостевой доступ</div>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="tariffs__card-price">2 400 ₽ / месяц</div>
+
+              <div class="tariffs__card-buy">
+                <button class="tariffs__card-buy-button">Оформить</button>
               </div>
             </div>
+
+            <div class="tariffs__card tariffs__card_pro" data-card="bezlimit">
+              <h3 class="tariffs__card-title">Тариф Про</h3>
+
+              <div class="tariffs__card-discount">-15%</div>
+
+              <ul class="tariffs__card-services">
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">
+                    Безлимитный доступ в один выбранный клуб
+                  </div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">Бесплатное занятие с тренером</div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">10+ групповых тренировок</div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">Спа зона</div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">Занятия с тренером</div>
+                  <div class="tariffs__card-services-item-info active">
+                    <button class="tariffs__card-services-item-info-button"></button>
+                    <div class="tariffs__card-services-item-info-label">Занятия с тренером</div>
+                  </div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">Бассейн</div>
+                </li>
+                <li class="tariffs__card-services-item">
+                  <div class="tariffs__card-services-item-name">Гостевой доступ</div>
+                  <div class="tariffs__card-services-item-info">
+                    <button class="tariffs__card-services-item-info-button"></button>
+                    <div class="tariffs__card-services-item-info-label">Гостевой доступ</div>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="tariffs__card-price">3 600 ₽ / месяц</div>
+
+              <div class="tariffs__card-buy">
+                <button class="tariffs__card-buy-button">Оформить</button>
+              </div>
+            </div>
+
+            <div class="tariffs__card tariffs__card_light" data-card="po-poseshcheniyam">
+              <h3 class="tariffs__card-title">Тариф Лайт</h3>
+
+              <ul class="tariffs__card-services">
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">
+                    Безлимитный доступ в один выбранный клуб
+                  </div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">Бесплатное занятие с тренером</div>
+                </li>
+                <li class="tariffs__card-services-item active">
+                  <div class="tariffs__card-services-item-name">10+ групповых тренировок</div>
+                </li>
+                <li class="tariffs__card-services-item">
+                  <div class="tariffs__card-services-item-name">Спа зона</div>
+                </li>
+                <li class="tariffs__card-services-item">
+                  <div class="tariffs__card-services-item-name">Занятия с тренером</div>
+                  <div class="tariffs__card-services-item-info">
+                    <button class="tariffs__card-services-item-info-button"></button>
+                    <div class="tariffs__card-services-item-info-label">Занятия с тренером</div>
+                  </div>
+                </li>
+                <li class="tariffs__card-services-item">
+                  <div class="tariffs__card-services-item-name">Бассейн</div>
+                </li>
+                <li class="tariffs__card-services-item">
+                  <div class="tariffs__card-services-item-name">Гостевой доступ</div>
+                  <div class="tariffs__card-services-item-info">
+                    <button class="tariffs__card-services-item-info-button"></button>
+                    <div class="tariffs__card-services-item-info-label">Гостевой доступ</div>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="tariffs__card-price">1 200 ₽ / месяц</div>
+
+              <div class="tariffs__card-buy">
+                <button class="tariffs__card-buy-button">Оформить</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="tariffs__more">
+            <button class="tariffs__more-button">Показать ещё</button>
           </div>
         </div>
       </section>

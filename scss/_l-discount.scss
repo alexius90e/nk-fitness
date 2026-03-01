@@ -1,0 +1,245 @@
+.discount {
+  position: relative;
+  padding: 48px 0;
+
+  @include mobile {
+    padding: 12px 0;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+
+    @include laptop {
+      display: block;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    margin: 0 0 -12px;
+    font-family: 'Christopher', sans-serif;
+    font-weight: 500;
+    font-size: 84px;
+    line-height: 100%;
+    color: #4f0001;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__heading {
+    display: none;
+    margin: 0;
+
+    @include mobile {
+      display: block;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      max-height: 65px;
+      height: auto;
+
+      @include mobile {
+        max-height: 38px;
+      }
+    }
+  }
+
+  &__description {
+    display: none;
+    margin: 0 0 17px;
+    padding-left: 32px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 110%;
+    color: #282828;
+
+    @include mobile {
+      display: block;
+      font-size: 15px;
+    }
+  }
+
+  &__photo {
+    flex: 0 0 calc(100% / 2 - 24px / 2);
+    margin: 0;
+
+    @include laptop {
+      flex: 1 1 100%;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 32px;
+    }
+  }
+
+  &__info {
+    flex: 0 0 calc(100% / 2 - 24px / 2);
+    padding: 48px;
+    box-sizing: border-box;
+    border-radius: 32px;
+    background-color: #f4f4fb;
+
+    @include laptop {
+      flex: 1 1 100%;
+    }
+
+    @include mobile {
+      padding: 24px;
+    }
+
+    & > * {
+      &:first-child {
+        @include mobile {
+          margin: 0;
+        }
+      }
+    }
+
+    &-title {
+      position: absolute;
+      margin: 0 0 -12px;
+      font-family: 'Christopher', sans-serif;
+      font-weight: 500;
+      font-size: 84px;
+      line-height: 100%;
+      color: #4f0001;
+      opacity: 0;
+      pointer-events: none;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &-heading {
+      display: block;
+      margin: 0;
+
+      @include mobile {
+        display: none;
+      }
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        max-height: 65px;
+        height: auto;
+
+        @include mobile {
+          max-height: 38px;
+        }
+      }
+    }
+
+    &-description {
+      margin: 0 0 32px;
+      padding-left: 32px;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 110%;
+      color: #282828;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &-text {
+      margin: 12px 0 0;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 125%;
+      color: #1c1c1c;
+
+      @include mobile {
+        font-size: 17px;
+      }
+    }
+
+    &-details {
+      margin: 12px 0 0;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 125%;
+      color: #1c1c1c;
+    }
+
+    &-contacts {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 32px 0 0 ;
+
+      @include mobile {
+        gap: 8px 2px;
+        margin-top: 16px;
+      }
+
+      &-phone {
+        &-link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 44px;
+          padding: 10px 24px;
+          box-sizing: border-box;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 100%;
+          color: #282828;
+          border-radius: 50px;
+          background-color: #fefefe;
+          transition: color ease-out 0.2s;
+
+          &:hover {
+            color: #8f2d29;
+          }
+        }
+      }
+
+      &-social {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        @include mobile {
+          gap: 8px 2px;
+        }
+
+        &-link {
+          display: flex;
+          align-content: inherit;
+          justify-content: center;
+          flex: 0 0 auto;
+          min-height: 44px;
+          width: 44px;
+          box-sizing: border-box;
+          border-radius: 50px;
+          background-color: #fefefe;
+
+          &-icon {
+            display: block;
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

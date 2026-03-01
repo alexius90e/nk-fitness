@@ -32,6 +32,22 @@
     );
   }
 
+  &_fullfilled {
+    top: 0;
+    padding: 32px 0;
+    border-radius: 0 0 42px 42px;
+    background: linear-gradient(
+      330deg,
+      rgba(255, 255, 255, 0) 8%,
+      rgba(141, 185, 214, 0.2) 65%,
+      #7eb3d6 100%
+    );
+
+    @include laptop {
+      padding: 12px;
+    }
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;

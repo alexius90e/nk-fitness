@@ -1,2 +1,10 @@
 .main {
 }
+
+body:has(.header_fullfilled) .main {
+  padding-top: 126px;
+
+  @include laptop {
+    padding-top: 84px;
+  }
+}

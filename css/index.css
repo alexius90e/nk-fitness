@@ -2789,12 +2789,30 @@ body:has(.header_fullfilled) .main {
   padding: 48px 0;
 }
 .all-clubs__title {
+  position: absolute;
   margin: 0 0 -12px;
   font-family: "Christopher", sans-serif;
   font-weight: 500;
   font-size: 84px;
   line-height: 100%;
   color: #4f0001;
+  opacity: 0;
+  pointer-events: none;
+}
+.all-clubs__heading {
+  display: block;
+  margin: 0;
+}
+.all-clubs__heading-image {
+  display: block;
+  max-width: 100%;
+  max-height: 65px;
+  height: auto;
+}
+@media (max-width: 576px) {
+  .all-clubs__heading-image {
+    max-height: 38px;
+  }
 }
 .all-clubs__description {
   margin: 0 0 32px;
@@ -2803,6 +2821,12 @@ body:has(.header_fullfilled) .main {
   font-size: 22px;
   line-height: 110%;
   color: #282828;
+}
+@media (max-width: 576px) {
+  .all-clubs__description {
+    margin-bottom: 17px;
+    font-size: 15px;
+  }
 }
 .all-clubs__clubs {
   position: relative;
@@ -2815,6 +2839,25 @@ body:has(.header_fullfilled) .main {
   max-width: 100%;
   height: auto;
   border-radius: 32px;
+}
+.all-clubs__clubs-map-image_desktop {
+  display: block;
+}
+@media (max-width: 768px) {
+  .all-clubs__clubs-map-image_desktop {
+    display: none;
+  }
+}
+.all-clubs__clubs-map-image_mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .all-clubs__clubs-map-image_mobile {
+    display: block;
+    height: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 .all-clubs__clubs-tag {
   position: absolute;

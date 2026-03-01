@@ -4383,6 +4383,180 @@ body:has(.header_fullfilled) .main {
   background-color: #8f2d29;
 }
 
+.tariffs-details {
+  padding: 48px 0;
+}
+@media (max-width: 576px) {
+  .tariffs-details {
+    padding: 12px 0;
+  }
+}
+.tariffs-details__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+.tariffs-details__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+  padding: 32px;
+  border-radius: 32px;
+}
+@media (max-width: 1024px) {
+  .tariffs-details__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (max-width: 576px) {
+  .tariffs-details__item {
+    gap: 16px;
+    padding: 24px;
+  }
+}
+.tariffs-details__item:nth-child(odd) {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#f3f4fb));
+  background: linear-gradient(180deg, #f7f7f7 0%, #f3f4fb 100%);
+}
+.tariffs-details__item:nth-child(even) {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2f8fd), to(#e1f0fa));
+  background: linear-gradient(180deg, #f2f8fd 0%, #e1f0fa 100%);
+}
+.tariffs-details__item-info-title {
+  margin: 0 0 16px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: #282828;
+}
+@media (max-width: 576px) {
+  .tariffs-details__item-info-title {
+    font-size: 19px;
+  }
+}
+.tariffs-details__item-info-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+@media (max-width: 1024px) {
+  .tariffs-details__item-info-content {
+    gap: 8px;
+  }
+}
+.tariffs-details__item-info-content-paragraph {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #282828;
+}
+.tariffs-details__item:nth-child(odd) .tariffs-details__item-info {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+}
+@media (max-width: 1024px) {
+  .tariffs-details__item:nth-child(odd) .tariffs-details__item-info {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+.tariffs-details__item:nth-child(even) .tariffs-details__item-info {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+@media (max-width: 1024px) {
+  .tariffs-details__item:nth-child(even) .tariffs-details__item-info {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+.tariffs-details__item-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 429px;
+          flex: 0 0 429px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+}
+@media (max-width: 1024px) {
+  .tariffs-details__item-tags {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+.tariffs-details__item-tags-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #282828;
+  border: 2px solid #68acd9;
+  border-radius: 32px;
+}
+@media (max-width: 1024px) {
+  .tariffs-details__item-tags-item {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .tariffs-details__item-tags-item {
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+}
+.tariffs-details__item:nth-child(odd) .tariffs-details__item-tags {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+@media (max-width: 1024px) {
+  .tariffs-details__item:nth-child(odd) .tariffs-details__item-tags {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+.tariffs-details__item:nth-child(even) .tariffs-details__item-tags {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+}
+@media (max-width: 1024px) {
+  .tariffs-details__item:nth-child(even) .tariffs-details__item-tags {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 .sport-club {
   padding: 48px 0;
 }

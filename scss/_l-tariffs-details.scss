@@ -1,0 +1,134 @@
+.tariffs-details {
+  padding: 48px 0;
+
+  @include mobile {
+    padding: 12px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 32px;
+    border-radius: 32px;
+
+    @include laptop {
+      flex-wrap: wrap;
+    }
+
+    @include mobile {
+      gap: 16px;
+      padding: 24px;
+    }
+
+    &:nth-child(odd) {
+      background: linear-gradient(180deg, #f7f7f7 0%, #f3f4fb 100%);
+    }
+
+    &:nth-child(even) {
+      background: linear-gradient(180deg, #f2f8fd 0%, #e1f0fa 100%);
+    }
+
+    &-info {
+      &-title {
+        margin: 0 0 16px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 125%;
+        color: #282828;
+
+        @include mobile {
+          font-size: 19px;
+        }
+      }
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        @include laptop {
+          gap: 8px;
+        }
+
+        &-paragraph {
+          margin: 0;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 125%;
+          color: #282828;
+        }
+      }
+    }
+
+    &:nth-child(odd) &-info {
+      order: 0;
+
+      @include laptop {
+        order: 0;
+      }
+    }
+
+    &:nth-child(even) &-info {
+      order: 1;
+
+      @include laptop {
+        order: 0;
+      }
+    }
+
+    &-tags {
+      display: flex;
+      flex: 0 0 429px;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      @include laptop {
+        flex: 1 1 100%;
+      }
+
+      &-item {
+        flex: 0 0 auto;
+        padding: 12px 24px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: #282828;
+        border: 2px solid #68acd9;
+        border-radius: 32px;
+
+        @include laptop {
+          padding: 10px 20px;
+          font-size: 14px;
+        }
+
+        @include mobile {
+          padding: 7px 12px;
+          font-size: 13px;
+        }
+      }
+    }
+
+    &:nth-child(odd) &-tags {
+      order: 1;
+
+      @include laptop {
+        order: 1;
+      }
+    }
+
+    &:nth-child(even) &-tags {
+      order: 0;
+
+      @include laptop {
+        order: 1;
+      }
+    }
+  }
+}

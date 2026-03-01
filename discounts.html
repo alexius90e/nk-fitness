@@ -187,438 +187,122 @@
     </div>
 
     <main class="main">
-      <section class="tariffs">
+      <section class="discounts">
         <div class="custom-container">
-          <h2 class="tariffs__title">Выбирай</h2>
+          <h2 class="discounts__title">Акции и скидки</h2>
 
-          <figure class="tariffs__heading">
+          <figure class="discounts__heading">
             <img
-              class="tariffs__heading-image"
-              src="./assets/heading/heading-tariffs.svg"
+              class="discounts__heading-image"
+              src="./assets/heading/heading-discounts.svg"
               alt="heading"
             />
           </figure>
 
-          <div class="tariffs__description">свой тариф фитнеса</div>
+          <div class="discounts__description">в клубах НК Фитнес</div>
 
-          <ul class="tariffs__menu">
-            <li class="tariffs__menu-item">
-              <button class="tariffs__menu-item-button active" data-target="all">Все</button>
-            </li>
-            <li class="tariffs__menu-item">
-              <button class="tariffs__menu-item-button" data-target="bezlimit">Безлимит</button>
-            </li>
-            <li class="tariffs__menu-item">
-              <button class="tariffs__menu-item-button" data-target="po-poseshcheniyam">
-                По посещениям
-              </button>
-            </li>
-            <li class="tariffs__menu-item">
-              <button class="tariffs__menu-item-button" data-target="personalnye">
-                Персональные
-              </button>
-            </li>
-            <li class="tariffs__menu-item">
-              <button class="tariffs__menu-item-button" data-target="semejnye">Семейные</button>
-            </li>
-          </ul>
+          <div class="discounts__slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <figure class="discounts__slide">
+                    <img
+                      class="discounts__slide-image"
+                      src="./assets/discounts-image-1.jpg"
+                      alt="image"
+                    />
+                  </figure>
+                </div>
 
-          <div class="tariffs__cards">
-            <div class="tariffs__card tariffs__card_light" data-card="bezlimit">
-              <h3 class="tariffs__card-title">Тариф Лайт</h3>
+                <div class="swiper-slide">
+                  <figure class="discounts__slide">
+                    <img
+                      class="discounts__slide-image"
+                      src="./assets/discounts-image-1.jpg"
+                      alt="image"
+                    />
+                  </figure>
+                </div>
 
-              <ul class="tariffs__card-services">
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">
-                    Безлимитный доступ в один выбранный клуб
-                  </div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">Бесплатное занятие с тренером</div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">10+ групповых тренировок</div>
-                </li>
-                <li class="tariffs__card-services-item">
-                  <div class="tariffs__card-services-item-name">Спа зона</div>
-                </li>
-                <li class="tariffs__card-services-item">
-                  <div class="tariffs__card-services-item-name">Занятия с тренером</div>
-                  <div class="tariffs__card-services-item-info">
-                    <button class="tariffs__card-services-item-info-button"></button>
-                    <div class="tariffs__card-services-item-info-label">Занятия с тренером</div>
-                  </div>
-                </li>
-                <li class="tariffs__card-services-item">
-                  <div class="tariffs__card-services-item-name">Бассейн</div>
-                </li>
-                <li class="tariffs__card-services-item">
-                  <div class="tariffs__card-services-item-name">Гостевой доступ</div>
-                  <div class="tariffs__card-services-item-info">
-                    <button class="tariffs__card-services-item-info-button"></button>
-                    <div class="tariffs__card-services-item-info-label">Гостевой доступ</div>
-                  </div>
-                </li>
-              </ul>
+                <div class="swiper-slide">
+                  <figure class="discounts__slide">
+                    <img
+                      class="discounts__slide-image"
+                      src="./assets/discounts-image-1.jpg"
+                      alt="image"
+                    />
+                  </figure>
+                </div>
 
-              <div class="tariffs__card-price">1 200 ₽ / месяц</div>
-
-              <div class="tariffs__card-buy">
-                <button class="tariffs__card-buy-button">Оформить</button>
-              </div>
-            </div>
-
-            <div class="tariffs__card tariffs__card_smart" data-card="po-poseshcheniyam">
-              <h3 class="tariffs__card-title">Тариф Смарт</h3>
-
-              <div class="tariffs__card-discount">-15%</div>
-
-              <ul class="tariffs__card-services">
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">
-                    Безлимитный доступ в один выбранный клуб
-                  </div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">Бесплатное занятие с тренером</div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">10+ групповых тренировок</div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">Спа зона</div>
-                </li>
-                <li class="tariffs__card-services-item">
-                  <div class="tariffs__card-services-item-name">Занятия с тренером</div>
-                  <div class="tariffs__card-services-item-info">
-                    <button class="tariffs__card-services-item-info-button"></button>
-                    <div class="tariffs__card-services-item-info-label">Занятия с тренером</div>
-                  </div>
-                </li>
-                <li class="tariffs__card-services-item">
-                  <div class="tariffs__card-services-item-name">Бассейн</div>
-                </li>
-                <li class="tariffs__card-services-item">
-                  <div class="tariffs__card-services-item-name">Гостевой доступ</div>
-                  <div class="tariffs__card-services-item-info">
-                    <button class="tariffs__card-services-item-info-button"></button>
-                    <div class="tariffs__card-services-item-info-label">Гостевой доступ</div>
-                  </div>
-                </li>
-              </ul>
-
-              <div class="tariffs__card-price">2 400 ₽ / месяц</div>
-
-              <div class="tariffs__card-buy">
-                <button class="tariffs__card-buy-button">Оформить</button>
-              </div>
-            </div>
-
-            <div class="tariffs__card tariffs__card_pro" data-card="personalnye">
-              <h3 class="tariffs__card-title">Тариф Про</h3>
-
-              <div class="tariffs__card-discount">-15%</div>
-
-              <ul class="tariffs__card-services">
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">
-                    Безлимитный доступ в один выбранный клуб
-                  </div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">Бесплатное занятие с тренером</div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">10+ групповых тренировок</div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">Спа зона</div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">Занятия с тренером</div>
-                  <div class="tariffs__card-services-item-info active">
-                    <button class="tariffs__card-services-item-info-button"></button>
-                    <div class="tariffs__card-services-item-info-label">Занятия с тренером</div>
-                  </div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">Бассейн</div>
-                </li>
-                <li class="tariffs__card-services-item">
-                  <div class="tariffs__card-services-item-name">Гостевой доступ</div>
-                  <div class="tariffs__card-services-item-info">
-                    <button class="tariffs__card-services-item-info-button"></button>
-                    <div class="tariffs__card-services-item-info-label">Гостевой доступ</div>
-                  </div>
-                </li>
-              </ul>
-
-              <div class="tariffs__card-price">3 600 ₽ / месяц</div>
-
-              <div class="tariffs__card-buy">
-                <button class="tariffs__card-buy-button">Оформить</button>
-              </div>
-            </div>
-
-            <div class="tariffs__card tariffs__card_smart" data-card="semejnye">
-              <h3 class="tariffs__card-title">Тариф Смарт</h3>
-
-              <div class="tariffs__card-discount">-15%</div>
-
-              <ul class="tariffs__card-services">
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">
-                    Безлимитный доступ в один выбранный клуб
-                  </div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">Бесплатное занятие с тренером</div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">10+ групповых тренировок</div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">Спа зона</div>
-                </li>
-                <li class="tariffs__card-services-item">
-                  <div class="tariffs__card-services-item-name">Занятия с тренером</div>
-                  <div class="tariffs__card-services-item-info">
-                    <button class="tariffs__card-services-item-info-button"></button>
-                    <div class="tariffs__card-services-item-info-label">Занятия с тренером</div>
-                  </div>
-                </li>
-                <li class="tariffs__card-services-item">
-                  <div class="tariffs__card-services-item-name">Бассейн</div>
-                </li>
-                <li class="tariffs__card-services-item">
-                  <div class="tariffs__card-services-item-name">Гостевой доступ</div>
-                  <div class="tariffs__card-services-item-info">
-                    <button class="tariffs__card-services-item-info-button"></button>
-                    <div class="tariffs__card-services-item-info-label">Гостевой доступ</div>
-                  </div>
-                </li>
-              </ul>
-
-              <div class="tariffs__card-price">2 400 ₽ / месяц</div>
-
-              <div class="tariffs__card-buy">
-                <button class="tariffs__card-buy-button">Оформить</button>
-              </div>
-            </div>
-
-            <div class="tariffs__card tariffs__card_pro" data-card="bezlimit">
-              <h3 class="tariffs__card-title">Тариф Про</h3>
-
-              <div class="tariffs__card-discount">-15%</div>
-
-              <ul class="tariffs__card-services">
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">
-                    Безлимитный доступ в один выбранный клуб
-                  </div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">Бесплатное занятие с тренером</div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">10+ групповых тренировок</div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">Спа зона</div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">Занятия с тренером</div>
-                  <div class="tariffs__card-services-item-info active">
-                    <button class="tariffs__card-services-item-info-button"></button>
-                    <div class="tariffs__card-services-item-info-label">Занятия с тренером</div>
-                  </div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">Бассейн</div>
-                </li>
-                <li class="tariffs__card-services-item">
-                  <div class="tariffs__card-services-item-name">Гостевой доступ</div>
-                  <div class="tariffs__card-services-item-info">
-                    <button class="tariffs__card-services-item-info-button"></button>
-                    <div class="tariffs__card-services-item-info-label">Гостевой доступ</div>
-                  </div>
-                </li>
-              </ul>
-
-              <div class="tariffs__card-price">3 600 ₽ / месяц</div>
-
-              <div class="tariffs__card-buy">
-                <button class="tariffs__card-buy-button">Оформить</button>
-              </div>
-            </div>
-
-            <div class="tariffs__card tariffs__card_light" data-card="po-poseshcheniyam">
-              <h3 class="tariffs__card-title">Тариф Лайт</h3>
-
-              <ul class="tariffs__card-services">
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">
-                    Безлимитный доступ в один выбранный клуб
-                  </div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">Бесплатное занятие с тренером</div>
-                </li>
-                <li class="tariffs__card-services-item active">
-                  <div class="tariffs__card-services-item-name">10+ групповых тренировок</div>
-                </li>
-                <li class="tariffs__card-services-item">
-                  <div class="tariffs__card-services-item-name">Спа зона</div>
-                </li>
-                <li class="tariffs__card-services-item">
-                  <div class="tariffs__card-services-item-name">Занятия с тренером</div>
-                  <div class="tariffs__card-services-item-info">
-                    <button class="tariffs__card-services-item-info-button"></button>
-                    <div class="tariffs__card-services-item-info-label">Занятия с тренером</div>
-                  </div>
-                </li>
-                <li class="tariffs__card-services-item">
-                  <div class="tariffs__card-services-item-name">Бассейн</div>
-                </li>
-                <li class="tariffs__card-services-item">
-                  <div class="tariffs__card-services-item-name">Гостевой доступ</div>
-                  <div class="tariffs__card-services-item-info">
-                    <button class="tariffs__card-services-item-info-button"></button>
-                    <div class="tariffs__card-services-item-info-label">Гостевой доступ</div>
-                  </div>
-                </li>
-              </ul>
-
-              <div class="tariffs__card-price">1 200 ₽ / месяц</div>
-
-              <div class="tariffs__card-buy">
-                <button class="tariffs__card-buy-button">Оформить</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="tariffs__more">
-            <button class="tariffs__more-button">Показать ещё</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="tariffs-details">
-        <div class="custom-container">
-          <div class="tariffs-details__wrapper">
-            <div class="tariffs-details__item">
-              <div class="tariffs-details__item-info">
-                <div class="tariffs-details__item-info-title">Тариф Лайт</div>
-                <div class="tariffs-details__item-info-content">
-                  <p class="tariffs-details__item-info-content-paragraph">
-                    Подойдёт тем, кто хочет тренироваться в привычном клубе и не переплачивать за
-                    лишние опции. Безлимитный доступ в один выбранный клуб, более десяти групповых
-                    тренировок и бесплатное занятие с тренером для старта.
-                  </p>
-                  <p class="tariffs-details__item-info-content-paragraph">
-                    Отличный выбор для самостоятельных тренировок и стабильного фитнес-ритма.
-                  </p>
+                <div class="swiper-slide">
+                  <figure class="discounts__slide">
+                    <img
+                      class="discounts__slide-image"
+                      src="./assets/discounts-image-1.jpg"
+                      alt="image"
+                    />
+                  </figure>
                 </div>
               </div>
 
-              <div class="tariffs-details__item-tags">
-                <div class="tariffs-details__item-tags-item">10+ групповых тренировок</div>
-                <div class="tariffs-details__item-tags-item">Тренажерный зал</div>
-                <div class="tariffs-details__item-tags-item">Зал йоги</div>
-                <div class="tariffs-details__item-tags-item">Зона татами</div>
-                <div class="tariffs-details__item-tags-item">TRX зона</div>
-              </div>
-            </div>
-
-            <div class="tariffs-details__item">
-              <div class="tariffs-details__item-info">
-                <div class="tariffs-details__item-info-title">Тариф Смарт</div>
-                <div class="tariffs-details__item-info-content">
-                  <p class="tariffs-details__item-info-content-paragraph">
-                    Для тех, кто живёт в ритме города и ценит свободу выбора. Безлимитный доступ во
-                    все клубы HK Фитнес, более двадцати групповых тренировок, спа-зона и бесплатное
-                    занятие с тренером.
-                  </p>
-                  <p class="tariffs-details__item-info-content-paragraph">
-                    Удобный формат для активной жизни и разнообразных тренировок без привязки к
-                    одному клубу.
-                  </p>
-                </div>
-              </div>
-
-              <div class="tariffs-details__item-tags">
-                <div class="tariffs-details__item-tags-item">20+ групповых тренировок</div>
-                <div class="tariffs-details__item-tags-item">Спа зона</div>
-                <div class="tariffs-details__item-tags-item">Тренажерный зал</div>
-                <div class="tariffs-details__item-tags-item">Зал йоги</div>
-                <div class="tariffs-details__item-tags-item">Зона татами</div>
-                <div class="tariffs-details__item-tags-item">TRX зона</div>
-              </div>
-            </div>
-
-            <div class="tariffs-details__item">
-              <div class="tariffs-details__item-info">
-                <div class="tariffs-details__item-info-title">Тариф Про</div>
-                <div class="tariffs-details__item-info-content">
-                  <p class="tariffs-details__item-info-content-paragraph">
-                    Для тех, кто хочет максимум возможностей и полный комфорт. Все клубы HK Фитнес
-                    без ограничений, более двадцати групповых тренировок, спа-зона, бассейн и
-                    занятия с тренером.
-                  </p>
-                  <p class="tariffs-details__item-info-content-paragraph">
-                    Подходит тем, кто делает фитнес частью образа жизни и выбирает максимальный
-                    уровень сервиса.
-                  </p>
-                </div>
-              </div>
-
-              <div class="tariffs-details__item-tags">
-                <div class="tariffs-details__item-tags-item">30+ групповых тренировок</div>
-                <div class="tariffs-details__item-tags-item">Спа зона</div>
-                <div class="tariffs-details__item-tags-item">Бассейн</div>
-                <div class="tariffs-details__item-tags-item">Тренажерный зал</div>
-                <div class="tariffs-details__item-tags-item">Зал йоги</div>
-                <div class="tariffs-details__item-tags-item">Зона татами</div>
-                <div class="tariffs-details__item-tags-item">TRX зона</div>
-              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section class="gift-cards">
-        <div class="custom-container">
-          <div class="gift-cards__wrapper">
-            <div class="gift-cards__info">
-              <h2 class="gift-cards__info-title">Подарочные карты</h2>
-
-              <figure class="gift-cards__info-heading">
+          <div class="discounts__cards">
+            <div class="discounts__card">
+              <figure class="discounts__card-photo">
                 <img
-                  class="gift-cards__info-heading-image"
-                  src="./assets/heading/heading-gift-cards.svg"
-                  alt="heading"
+                  class="discounts__card-photo-image"
+                  src="./assets/discounts-card-image-1.jpg"
+                  alt="photo"
                 />
               </figure>
-
-              <div class="gift-cards__info-description">подари спорт близким</div>
-
-              <div class="gift-cards__info-give">
-                <button class="gift-cards__info-give-button">Подарить карту</button>
+              <div class="discounts__card-tag">-20%</div>
+              <div class="discounts__card-text">
+                <b>20% скидка </b> на вступительный платеж при оформлении на сайте
+              </div>
+              <div class="discounts__card-more">
+                <a class="discounts__card-more-link" href="#">Подробнее</a>
               </div>
             </div>
 
-            <figure class="gift-cards__figure">
-              <img
-                class="gift-cards__figure-image gift-cards__figure-image_desktop"
-                src="./assets/gift-cards-image.png"
-                alt="gift"
-              />
-              <img
-                class="gift-cards__figure-image gift-cards__figure-image_mobile"
-                src="./assets/gift-cards-image-mob.png"
-                alt="gift"
-              />
-            </figure>
+            <div class="discounts__card">
+              <figure class="discounts__card-photo">
+                <img
+                  class="discounts__card-photo-image"
+                  src="./assets/discounts-card-image-1.jpg"
+                  alt="photo"
+                />
+              </figure>
+              <div class="discounts__card-tag">-50%</div>
+              <div class="discounts__card-text">
+                <b>50% скидка</b> именинникам на вступительный платеж
+              </div>
+              <div class="discounts__card-more">
+                <a class="discounts__card-more-link" href="#">Подробнее</a>
+              </div>
+            </div>
+
+            <div class="discounts__card">
+              <figure class="discounts__card-photo">
+                <img
+                  class="discounts__card-photo-image"
+                  src="./assets/discounts-card-image-1.jpg"
+                  alt="photo"
+                />
+              </figure>
+              <div class="discounts__card-tag">-40%</div>
+              <div class="discounts__card-text">
+                <b>до 40% скидка</b>
+                на вступительный платеж для студентов
+              </div>
+              <div class="discounts__card-more">
+                <a class="discounts__card-more-link" href="#">Подробнее</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -259,6 +259,26 @@ if (atmosphereSwiperEl) {
   });
 }
 
+// discounts
+
+const discountsSwiperEl = document.querySelector('.discounts .swiper');
+
+if (discountsSwiperEl) {
+  const discountsSwiper = new Swiper(discountsSwiperEl, {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 24,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next',
+    },
+  });
+}
+
 // blog
 
 const blogArticleFavoutitesButtons = document.querySelectorAll('.blog__article-favoutites-button');

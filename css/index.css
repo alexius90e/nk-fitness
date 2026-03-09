@@ -7137,7 +7137,7 @@ body:has(.header_fullfilled) .main {
 }
 @media (max-width: 768px) {
   .coach-personal__details-signup-modal-body {
-    max-width: 100dvh;
+    max-width: none;
     width: 100%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;

@@ -763,3 +763,32 @@ if (scheduleGroupDaysSwiperEl && scheduleGroupEventsSwiperEl) {
     },
   });
 }
+
+
+// coach-personal
+
+const coachPersonalMenuButtons = document.querySelectorAll('.coach-personal__info-menu-button');
+const coachPersonalSections = document.querySelectorAll('.coach-personal__info-section');
+
+function showCoachPersonalSection(target) {
+  coachPersonalSections.forEach((section) => section.classList.remove('active'));
+  const section = document.querySelector(
+    `.coach-personal__info-section[data-section="${target}"]`,
+  );
+  if (section) section.classList.add('active');
+}
+
+coachPersonalMenuButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    coachPersonalMenuButtons.forEach((button) => button.classList.remove('active'));
+    button.classList.add('active');
+    showCoachPersonalSection(button.dataset.target);
+  });
+});
+
+const activePersonalMenuButton = document.querySelector(
+  '.coach-personal__info-menu-button.active',
+);
+if (activePersonalMenuButton) {
+  showCoachPersonalSection(activePersonalMenuButton.dataset.target);
+}

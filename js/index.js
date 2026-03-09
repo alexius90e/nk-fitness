@@ -1,10 +1,12 @@
-const isNotFoundPageHidden = true;
+const isNotFoundPageHidden = false;
 
-const hiddenBlockSelectors = ['.loader', '.cookies'];
-hiddenBlockSelectors.forEach((selector) => {
-  const hiddenBlockEl = document.querySelector(selector);
-  if (hiddenBlockEl) hiddenBlockEl.style.display = 'none';
-});
+if (isNotFoundPageHidden) {
+  const hiddenBlockSelectors = ['.loader', '.cookies'];
+  hiddenBlockSelectors.forEach((selector) => {
+    const hiddenBlockEl = document.querySelector(selector);
+    if (hiddenBlockEl) hiddenBlockEl.style.display = 'none';
+  });
+}
 
 // custom select
 
@@ -764,7 +766,6 @@ if (scheduleGroupDaysSwiperEl && scheduleGroupEventsSwiperEl) {
   });
 }
 
-
 // coach-personal
 
 const coachPersonalMenuButtons = document.querySelectorAll('.coach-personal__info-menu-button');
@@ -772,9 +773,7 @@ const coachPersonalSections = document.querySelectorAll('.coach-personal__info-s
 
 function showCoachPersonalSection(target) {
   coachPersonalSections.forEach((section) => section.classList.remove('active'));
-  const section = document.querySelector(
-    `.coach-personal__info-section[data-section="${target}"]`,
-  );
+  const section = document.querySelector(`.coach-personal__info-section[data-section="${target}"]`);
   if (section) section.classList.add('active');
 }
 
@@ -786,9 +785,7 @@ coachPersonalMenuButtons.forEach((button) => {
   });
 });
 
-const activePersonalMenuButton = document.querySelector(
-  '.coach-personal__info-menu-button.active',
-);
+const activePersonalMenuButton = document.querySelector('.coach-personal__info-menu-button.active');
 if (activePersonalMenuButton) {
   showCoachPersonalSection(activePersonalMenuButton.dataset.target);
 }
@@ -797,7 +794,7 @@ if (activePersonalMenuButton) {
 
 const timeSchedulePersonalSelectEl = document.getElementById('timeSchedulePersonalSelect');
 
-if (timeSchedulePersonalSelectEl ) {
+if (timeSchedulePersonalSelectEl) {
   const timeSchedulePersonalSelect = new CustomSelect({
     element: timeSchedulePersonalSelectEl,
     defaultText: 'Весь день',

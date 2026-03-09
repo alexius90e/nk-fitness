@@ -186,7 +186,7 @@
     }
 
     &-signup {
-      margin: 32px 0 0 ;
+      margin: 32px 0 0;
 
       @include mobile {
         margin-top: 16px;
@@ -194,27 +194,31 @@
 
       &-button {
         display: inline-block;
-      padding: 16px 24px;
-      box-sizing: border-box;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 125%;
-      color: #fefefe;
-      border: none;
-      border-radius: 32px;
-      background-color: #8f2d29;
-      transition-property: background-color;
-      transition-timing-function: ease-out;
-      transition-duration: 0.2s;
-      cursor: pointer;
+        padding: 16px 24px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: #fefefe;
+        border: none;
+        border-radius: 32px;
+        background-color: #8f2d29;
+        transition-property: background-color;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+        cursor: pointer;
 
-      &:hover {
-        background-color: #9f322d;
-      }
+        @include mobile {
+          width: 100%;
+        }
 
-      &:active {
-        background-color: #af3732;
-      }
+        &:hover {
+          background-color: #9f322d;
+        }
+
+        &:active {
+          background-color: #af3732;
+        }
       }
     }
   }
@@ -223,6 +227,7 @@
     margin: 32px 0 0;
     padding: 48px;
     border-radius: 32px;
+    background: url(../assets/circles-bg.svg) top -160px right -90px / 410px no-repeat;
     background-color: #f4f4fb;
 
     @include laptop {
@@ -302,7 +307,6 @@
             height: 20px;
             background: url(../assets/check.svg) center / cover no-repeat;
           }
-
         }
       }
     }

@@ -6147,6 +6147,7 @@ body:has(.header_fullfilled) .main {
   margin: 32px 0 0;
   padding: 48px;
   border-radius: 32px;
+  background: url(../assets/circles-bg.svg) top -160px right -90px/410px no-repeat;
   background-color: #f4f4fb;
 }
 @media (max-width: 1024px) {
@@ -7070,6 +7071,11 @@ body:has(.header_fullfilled) .main {
           transition-duration: 0.2s;
   cursor: pointer;
 }
+@media (max-width: 576px) {
+  .coach-personal__details-signup-button {
+    width: 100%;
+  }
+}
 .coach-personal__details-signup-button:hover {
   background-color: #9f322d;
 }
@@ -7080,6 +7086,7 @@ body:has(.header_fullfilled) .main {
   margin: 32px 0 0;
   padding: 48px;
   border-radius: 32px;
+  background: url(../assets/circles-bg.svg) top -160px right -90px/410px no-repeat;
   background-color: #f4f4fb;
 }
 @media (max-width: 1024px) {

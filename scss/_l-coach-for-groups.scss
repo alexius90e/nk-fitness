@@ -190,6 +190,7 @@
     margin: 32px 0 0;
     padding: 48px;
     border-radius: 32px;
+    background: url(../assets/circles-bg.svg) top -160px right -90px / 410px no-repeat;
     background-color: #f4f4fb;
 
     @include laptop {

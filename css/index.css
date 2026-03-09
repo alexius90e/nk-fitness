@@ -7171,6 +7171,332 @@ body:has(.header_fullfilled) .main {
   background: url(../assets/check.svg) center/cover no-repeat;
 }
 
+.schedule-personal {
+  position: relative;
+  padding: 48px 0;
+}
+@media (max-width: 576px) {
+  .schedule-personal {
+    padding: 12px 0;
+  }
+}
+.schedule-personal__title {
+  margin: 0 0 32px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 125%;
+  color: #282828;
+}
+@media (max-width: 576px) {
+  .schedule-personal__title {
+    display: none;
+  }
+}
+.schedule-personal__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 0 0 32px;
+}
+@media (max-width: 576px) {
+  .schedule-personal__filter {
+    margin: 0 0 16px;
+  }
+}
+.schedule-personal__filter-select {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  max-width: none;
+}
+.schedule-personal__main {
+  position: relative;
+  padding: 0 54px;
+}
+@media (max-width: 576px) {
+  .schedule-personal__main {
+    padding: 0;
+  }
+}
+.schedule-personal__days {
+  margin: 0 0 12px;
+}
+.schedule-personal__days-slide {
+  padding: 11px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #282828;
+  text-align: center;
+  border-radius: 32px;
+  background-color: #f4f4fb;
+}
+@media (max-width: 576px) {
+  .schedule-personal__days-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: inherit;
+        align-content: inherit;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 4px;
+    padding: 10px;
+  }
+}
+.schedule-personal__days-slide_today {
+  color: #fefefe;
+  background: #68acd9;
+}
+.schedule-personal__days-slide_today .schedule-personal__days-slide-date {
+  display: none;
+}
+@media (max-width: 576px) {
+  .schedule-personal__days-slide_today .schedule-personal__days-slide-date {
+    display: inline-block;
+  }
+}
+.schedule-personal__days-slide_today .schedule-personal__days-slide-month {
+  display: none;
+}
+@media (max-width: 576px) {
+  .schedule-personal__days-slide-today {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .schedule-personal__days-slide-day {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+@media (max-width: 576px) {
+  .schedule-personal__days-slide-date {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+@media (max-width: 576px) {
+  .schedule-personal__days-slide-month {
+    display: none;
+  }
+}
+.schedule-personal__events-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+.schedule-personal__events-slide-event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  min-height: 158px;
+  max-height: 158px;
+  padding: 16px;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f4f4fb;
+}
+.schedule-personal__events-slide-event:empty {
+  background-color: #fafafa;
+}
+@media (max-width: 576px) {
+  .schedule-personal__events-slide-event:empty {
+    display: none;
+  }
+}
+.schedule-personal__event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 12px;
+}
+.schedule-personal__event-time {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 125%;
+  color: #808080;
+}
+.schedule-personal__event-info-name {
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 125%;
+  color: #282828;
+}
+.schedule-personal__event-coach {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.schedule-personal__event-coach-photo {
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+}
+.schedule-personal__event-coach-photo-image {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.schedule-personal__event-coach-name {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 125%;
+  color: #282828;
+}
+.schedule-personal__time {
+  position: absolute;
+  top: 54px;
+  left: 0;
+  right: calc(100% - 42px);
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+@media (max-width: 576px) {
+  .schedule-personal__time {
+    display: none;
+  }
+}
+.schedule-personal__time-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 158px;
+  max-height: 158px;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: #f4f4fb;
+}
+.schedule-personal__time-item-text {
+  min-width: 158px;
+  max-width: 158px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+@media (max-width: 576px) {
+  .schedule-personal__controls {
+    display: none;
+  }
+}
+.schedule-personal__controls-prev, .schedule-personal__controls-next {
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 42px;
+  aspect-ratio: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #e1f0fa;
+  border-radius: 48px;
+  background-color: #fefefe;
+  -webkit-transition: background-color ease-out 0.2s;
+  transition: background-color ease-out 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.schedule-personal__controls-prev:hover, .schedule-personal__controls-next:hover {
+  background-color: #68acd9;
+}
+.schedule-personal__controls-prev:active, .schedule-personal__controls-next:active {
+  background-color: #fefefe;
+}
+.schedule-personal__controls-prev::before, .schedule-personal__controls-next::before {
+  content: "";
+  display: block;
+  width: 24px;
+  aspect-ratio: 1;
+  background: url(../assets/next.svg) center/24px no-repeat;
+}
+.schedule-personal__controls-prev:hover::before, .schedule-personal__controls-next:hover::before {
+  -webkit-filter: brightness(0%) invert(100%);
+          filter: brightness(0%) invert(100%);
+}
+.schedule-personal__controls-prev:active::before, .schedule-personal__controls-next:active::before {
+  -webkit-filter: brightness(100%) invert(0%);
+          filter: brightness(100%) invert(0%);
+}
+.schedule-personal__controls-prev {
+  left: 0;
+}
+.schedule-personal__controls-prev::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.schedule-personal__controls-next {
+  right: 0;
+}
+
 .not-found {
   position: relative;
   padding: 391px 0 196px;

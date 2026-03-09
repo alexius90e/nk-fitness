@@ -792,3 +792,87 @@ const activePersonalMenuButton = document.querySelector(
 if (activePersonalMenuButton) {
   showCoachPersonalSection(activePersonalMenuButton.dataset.target);
 }
+
+// schedule-personal
+
+const timeSchedulePersonalSelectEl = document.getElementById('timeSchedulePersonalSelect');
+
+if (timeSchedulePersonalSelectEl ) {
+  const timeSchedulePersonalSelect = new CustomSelect({
+    element: timeSchedulePersonalSelectEl,
+    defaultText: 'Весь день',
+    options: [
+      { value: '10:00', label: '10:00' },
+      { value: '11:00', label: '11:00' },
+      { value: '13:00', label: '13:00' },
+      { value: '19:00', label: '19:00' },
+    ],
+  });
+}
+
+const schedulePersonalDaysSwiperEl = document.querySelector('.schedule-personal__days .swiper');
+const schedulePersonalEventsSwiperEl = document.querySelector('.schedule-personal__events .swiper');
+const schedulePersonalEventsPrevEl = document.querySelector('.schedule-personal__controls-prev');
+const schedulePersonalEventsNextEl = document.querySelector('.schedule-personal__controls-next');
+
+if (schedulePersonalDaysSwiperEl && schedulePersonalEventsSwiperEl) {
+  const thumbs = new Swiper(schedulePersonalDaysSwiperEl, {
+    spaceBetween: 8,
+    allowTouchMove: false,
+    breakpoints: {
+      320: {
+        slidesPerView: 6,
+        allowTouchMove: true,
+      },
+      577: {
+        slidesPerView: 2,
+        allowTouchMove: false,
+      },
+      993: {
+        slidesPerView: 3,
+        allowTouchMove: false,
+      },
+      1201: {
+        slidesPerView: 4,
+        allowTouchMove: false,
+      },
+    },
+    watchSlidesProgress: true,
+    slideToClickedSlide: true,
+    navigation: {
+      prevEl: schedulePersonalEventsPrevEl,
+      nextEl: schedulePersonalEventsNextEl,
+    },
+  });
+
+  const main = new Swiper(schedulePersonalEventsSwiperEl, {
+    spaceBetween: 8,
+    slidesPerView: 1,
+    allowTouchMove: false,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        allowTouchMove: true,
+      },
+      577: {
+        slidesPerView: 2,
+        allowTouchMove: false,
+      },
+      993: {
+        slidesPerView: 3,
+        allowTouchMove: false,
+      },
+      1201: {
+        slidesPerView: 4,
+        allowTouchMove: false,
+      },
+    },
+    thumbs: {
+      swiper: thumbs,
+    },
+    navigation: {
+      prevEl: schedulePersonalEventsPrevEl,
+      nextEl: schedulePersonalEventsNextEl,
+    },
+  });
+}

@@ -1,4 +1,4 @@
-const isNotFoundPageHidden = true;
+const isNotFoundPageHidden = false;
 
 if (isNotFoundPageHidden) {
   const hiddenBlockSelectors = ['.loader', '.cookies'];

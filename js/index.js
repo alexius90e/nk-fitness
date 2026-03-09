@@ -668,3 +668,98 @@ coachGroupTrainingSlides.forEach((card) => {
     if (isFavouritesButton) event.target.classList.toggle('active');
   });
 });
+
+// schedule-group
+
+const timeScheduleGroupSelectEl = document.getElementById('timeScheduleGroupSelect');
+const trainingScheduleGroupSelectEl = document.getElementById('trainingScheduleGroupSelect');
+
+if (timeScheduleGroupSelectEl && trainingScheduleGroupSelectEl) {
+  const timeScheduleGroupSelect = new CustomSelect({
+    element: timeScheduleGroupSelectEl,
+    defaultText: 'Весь день',
+    options: [
+      { value: '10:00', label: '10:00' },
+      { value: '11:00', label: '11:00' },
+      { value: '13:00', label: '13:00' },
+      { value: '19:00', label: '19:00' },
+    ],
+  });
+
+  const trainingScheduleGroupSelect = new CustomSelect({
+    element: trainingScheduleGroupSelectEl,
+    defaultText: 'Все тренировки',
+    options: [
+      { value: '1', label: 'Тренировки #1' },
+      { value: '2', label: 'Тренировки #2' },
+      { value: '3', label: 'Тренировки #3' },
+    ],
+  });
+}
+
+const scheduleGroupDaysSwiperEl = document.querySelector('.schedule-group__days .swiper');
+const scheduleGroupEventsSwiperEl = document.querySelector('.schedule-group__events .swiper');
+const scheduleGroupEventsPrevEl = document.querySelector('.schedule-group__controls-prev');
+const scheduleGroupEventsNextEl = document.querySelector('.schedule-group__controls-next');
+
+if (scheduleGroupDaysSwiperEl && scheduleGroupEventsSwiperEl) {
+  const thumbs = new Swiper(scheduleGroupDaysSwiperEl, {
+    spaceBetween: 8,
+    allowTouchMove: false,
+    breakpoints: {
+      320: {
+        slidesPerView: 6,
+        allowTouchMove: true,
+      },
+      577: {
+        slidesPerView: 2,
+        allowTouchMove: false,
+      },
+      993: {
+        slidesPerView: 3,
+        allowTouchMove: false,
+      },
+      1201: {
+        slidesPerView: 4,
+        allowTouchMove: false,
+      },
+    },
+    watchSlidesProgress: true,
+    slideToClickedSlide: true,
+    navigation: {
+      prevEl: scheduleGroupEventsPrevEl,
+      nextEl: scheduleGroupEventsNextEl,
+    },
+  });
+
+  const main = new Swiper(scheduleGroupEventsSwiperEl, {
+    spaceBetween: 8,
+    slidesPerView: 1,
+    allowTouchMove: false,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        allowTouchMove: true,
+      },
+      577: {
+        slidesPerView: 2,
+        allowTouchMove: false,
+      },
+      993: {
+        slidesPerView: 3,
+        allowTouchMove: false,
+      },
+      1201: {
+        slidesPerView: 4,
+        allowTouchMove: false,
+      },
+    },
+    thumbs: {
+      swiper: thumbs,
+    },
+    navigation: {
+      prevEl: scheduleGroupEventsPrevEl,
+      nextEl: scheduleGroupEventsNextEl,
+    },
+  });
+}

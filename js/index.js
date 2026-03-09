@@ -543,52 +543,76 @@ coachesCards.forEach((card) => {
   });
 });
 
-const coachesStatusSelect = new CustomSelect({
-  element: document.getElementById('coachesStatusSelect'),
-  defaultText: 'Все тренеры',
-  options: [
-    { value: 'personal', label: 'Персональный тренер' },
-    { value: 'professional', label: 'Тренеры групповых занятий' },
-    { value: 'universal', label: 'Универсальные тренера' },
-  ],
-  onChange: (value) => {
-    console.log('status:', value);
-  },
-});
+const coachesStatusSelectEl = document.getElementById('coachesStatusSelect');
+const coachesGenderSelectEl = document.getElementById('coachesGenderSelect');
 
-const coachesGenderSelect = new CustomSelect({
-  element: document.getElementById('coachesGenderSelect'),
-  defaultText: 'Пол',
-  options: [
-    { value: 'male', label: 'Мужской' },
-    { value: 'female', label: 'Женский' },
-  ],
-  onChange: (value) => {
-    console.log('gender:', value);
-  },
-});
-
-function filterCoaches() {
-  const statusValue = coachesStatusSelect.value;
-  const genderValue = coachesGenderSelect.value;
-
-  coachesCards.forEach((card) => {
-    const cardStatus = card.dataset.status;
-    const cardGender = card.dataset.gender;
-
-    if (statusValue === cardStatus && genderValue === cardGender) {
-      card.classList.remove('hidden');
-    } else if (statusValue === '' && genderValue === '') {
-      card.classList.remove('hidden');
-    } else if (statusValue === '' && genderValue === cardGender) {
-      card.classList.remove('hidden');
-    } else if (statusValue === cardStatus && genderValue === '') {
-      card.classList.remove('hidden');
-    } else {
-      card.classList.add('hidden');
-    }
+if (coachesStatusSelectEl && coachesGenderSelectEl) {
+  const coachesStatusSelect = new CustomSelect({
+    element: document.getElementById('coachesStatusSelect'),
+    defaultText: 'Все тренеры',
+    options: [
+      { value: 'personal', label: 'Персональный тренер' },
+      { value: 'professional', label: 'Тренеры групповых занятий' },
+      { value: 'universal', label: 'Универсальные тренера' },
+    ],
   });
+
+  const coachesGenderSelect = new CustomSelect({
+    element: document.getElementById('coachesGenderSelect'),
+    defaultText: 'Пол',
+    options: [
+      { value: 'male', label: 'Мужской' },
+      { value: 'female', label: 'Женский' },
+    ],
+  });
+
+  function filterCoaches() {
+    const statusValue = coachesStatusSelect.value;
+    const genderValue = coachesGenderSelect.value;
+
+    coachesCards.forEach((card) => {
+      const cardStatus = card.dataset.status;
+      const cardGender = card.dataset.gender;
+
+      if (statusValue === cardStatus && genderValue === cardGender) {
+        card.classList.remove('hidden');
+      } else if (statusValue === '' && genderValue === '') {
+        card.classList.remove('hidden');
+      } else if (statusValue === '' && genderValue === cardGender) {
+        card.classList.remove('hidden');
+      } else if (statusValue === cardStatus && genderValue === '') {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
+  coachesStatusSelect.onChange = filterCoaches;
+  coachesGenderSelect.onChange = filterCoaches;
 }
 
-coachesStatusSelect.onChange = filterCoaches;
-coachesGenderSelect.onChange = filterCoaches;
+
+// coach-for-groups
+
+const coachForGroupsMenuButtons = document.querySelectorAll('.coach-for-groups__info-menu-button');
+const coachForGroupsSections = document.querySelectorAll('.coach-for-groups__info-section');
+
+function showCoachForGroupsSection(target) {
+  coachForGroupsSections.forEach((section) => section.classList.remove('active'));
+  const section = document.querySelector(`.coach-for-groups__info-section[data-section="${target}"]`);
+  if (section) section.classList.add('active');
+}
+
+coachForGroupsMenuButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    coachForGroupsMenuButtons.forEach((button) => button.classList.remove('active'));
+    button.classList.add('active');
+    showCoachForGroupsSection(button.dataset.target);
+  });
+});
+
+const activeCoachForGroupsMenuButton = document.querySelector('.coach-for-groups__info-menu-button.active');
+if (activeCoachForGroupsMenuButton) {
+  showCoachForGroupsSection(activeCoachForGroupsMenuButton.dataset.target);
+}

@@ -187,209 +187,117 @@
     </div>
 
     <main class="main">
-      <section class="coaches">
+      <section class="coach-for-groups">
         <div class="custom-container">
-          <div class="coaches__wrapper">
-            <h2 class="coaches__title">Именинникам</h2>
+          <div class="coach-for-groups__wrapper">
+            <div class="coach-for-groups__details">
+              <div class="coach-for-groups__details-name">Анна Смирнова</div>
 
-            <figure class="coaches__heading">
-              <img
-                class="coaches__heading-image"
-                src="./assets/heading/heading-coaches.svg"
-                alt="heading"
-              />
-            </figure>
+              <div class="coach-for-groups__details-role">Тренер групповых программ</div>
 
-            <div class="coaches__description">в клубах НК Фитнес</div>
-
-            <div class="coaches__filter">
-              <div class="coaches__filter-select">
-                <div id="coachesStatusSelect"></div>
+              <div class="coach-for-groups__details-photo">
+                <figure class="coach-for-groups__details-photo-figure">
+                  <img
+                    class="coach-for-groups__details-photo-figure-image"
+                    src="./assets/coaches-photo-3.jpg"
+                    alt="photo"
+                  />
+                </figure>
+                <div class="coach-for-groups__details-photo-experience">Стаж 7 лет</div>
               </div>
 
-              <div class="coaches__filter-select">
-                <div id="coachesGenderSelect"></div>
+              <div class="coach-for-groups__details-location">Клуб на Большевиков</div>
+
+              <div class="coach-for-groups__details-section">
+                <div class="coach-for-groups__details-section-title">Специализация:</div>
+                <ul class="coach-for-groups__details-section-list">
+                  <li class="coach-for-groups__details-section-list-item">Коррекция фигуры</li>
+                  <li class="coach-for-groups__details-section-list-item">Бодибилдинг</li>
+                  <li class="coach-for-groups__details-section-list-item">
+                    Функциональный тренинг
+                  </li>
+                  <li class="coach-for-groups__details-section-list-item">Стретчинг</li>
+                </ul>
+              </div>
+
+              <div class="coach-for-groups__details-section">
+                <div class="coach-for-groups__details-section-title">Закрывает цели::</div>
+                <ul class="coach-for-groups__details-section-list">
+                  <li class="coach-for-groups__details-section-list-item">Коррекция фигуры</li>
+                  <li class="coach-for-groups__details-section-list-item">Бодибилдинг</li>
+                  <li class="coach-for-groups__details-section-list-item">
+                    Функциональный тренинг
+                  </li>
+                  <li class="coach-for-groups__details-section-list-item">Стретчинг</li>
+                </ul>
               </div>
             </div>
 
-            <div class="coaches__cards">
-              <div class="coaches__card" data-status="personal" data-gender="female">
-                <div class="coaches__card-top">
-                  <figure class="coaches__card-photo">
-                    <img
-                      class="coaches__card-photo-image"
-                      src="./assets/coaches-photo-1.jpg"
-                      alt="coach"
-                    />
-                  </figure>
+            <div class="coach-for-groups__info">
+              <nav class="coach-for-groups__info-menu">
+                <button class="coach-for-groups__info-menu-button active" data-target="achievements">
+                  Достижения
+                </button>
+                <button class="coach-for-groups__info-menu-button" data-target="education">
+                  Образование
+                </button>
+                <button class="coach-for-groups__info-menu-button" data-target="other">
+                  Другое
+                </button>
+              </nav>
 
-                  <div class="coaches__card-favourites">
-                    <button class="coaches__card-favourites-button"></button>
-                  </div>
-
-                  <div class="coaches__card-experience">Стаж 3 года</div>
+              <div class="coach-for-groups__info-wrapper">
+                <div class="coach-for-groups__info-section" data-section="achievements">
+                  <ul class="coach-for-groups__info-section-list">
+                    <li class="coach-for-groups__info-section-list-item">
+                      5 лет тренерской практики
+                    </li>
+                    <li class="coach-for-groups__info-section-list-item">
+                      Подготовка клиентов к соревнованиям по фитнес-бикини и бодибилдингу
+                    </li>
+                    <li class="coach-for-groups__info-section-list-item">
+                      Ежегодное участие в конкурсах и тренингах
+                    </li>
+                    <li class="coach-for-groups__info-section-list-item">
+                      Более 20 успешно завершённых программ трансформации
+                    </li>
+                  </ul>
                 </div>
 
-                <div class="coaches__card-info">
-                  <div class="coaches__card-info-title">Старицына Анна</div>
-
-                  <div class="coaches__card-info-text">
-                    Ведет тренировки более 5 лет, персональный тренер
-                  </div>
-
-                  <div class="coaches__card-info-more">
-                    <a class="coaches__card-info-more-link" href="#">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="coaches__card" data-status="professional" data-gender="male">
-                <div class="coaches__card-top">
-                  <figure class="coaches__card-photo">
-                    <img
-                      class="coaches__card-photo-image"
-                      src="./assets/coaches-photo-2.jpg"
-                      alt="coach"
-                    />
-                  </figure>
-
-                  <div class="coaches__card-favourites">
-                    <button class="coaches__card-favourites-button active"></button>
-                  </div>
-
-                  <div class="coaches__card-experience">Стаж 4 года</div>
+                <div class="coach-for-groups__info-section" data-section="education">
+                  <p>Образование</p>
+                  <ul class="coach-for-groups__info-section-list">
+                    <li class="coach-for-groups__info-section-list-item">
+                      5 лет тренерской практики
+                    </li>
+                    <li class="coach-for-groups__info-section-list-item">
+                      Подготовка клиентов к соревнованиям по фитнес-бикини и бодибилдингу
+                    </li>
+                    <li class="coach-for-groups__info-section-list-item">
+                      Ежегодное участие в конкурсах и тренингах
+                    </li>
+                    <li class="coach-for-groups__info-section-list-item">
+                      Более 20 успешно завершённых программ трансформации
+                    </li>
+                  </ul>
                 </div>
 
-                <div class="coaches__card-info">
-                  <div class="coaches__card-info-title">Ахметшин Вячеслав</div>
-
-                  <div class="coaches__card-info-text">
-                    Ведет тренировки более 5 лет, профессиональный тренер
-                  </div>
-
-                  <div class="coaches__card-info-more">
-                    <a class="coaches__card-info-more-link" href="./coach-for-groups.html">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="coaches__card" data-status="professional" data-gender="female">
-                <div class="coaches__card-top">
-                  <figure class="coaches__card-photo">
-                    <img
-                      class="coaches__card-photo-image"
-                      src="./assets/coaches-photo-3.jpg"
-                      alt="coach"
-                    />
-                  </figure>
-
-                  <div class="coaches__card-favourites">
-                    <button class="coaches__card-favourites-button"></button>
-                  </div>
-
-                  <div class="coaches__card-experience">Стаж 9 лет</div>
-                </div>
-
-                <div class="coaches__card-info">
-                  <div class="coaches__card-info-title">Елена Денисова</div>
-
-                  <div class="coaches__card-info-text">
-                    Ведет тренировки более 5 лет, профессиональный тренер
-                  </div>
-
-                  <div class="coaches__card-info-more">
-                    <a class="coaches__card-info-more-link" href="./coach-for-groups.html">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="coaches__card" data-status="professional" data-gender="male">
-                <div class="coaches__card-top">
-                  <figure class="coaches__card-photo">
-                    <img
-                      class="coaches__card-photo-image"
-                      src="./assets/coaches-photo-4.jpg"
-                      alt="coach"
-                    />
-                  </figure>
-
-                  <div class="coaches__card-favourites">
-                    <button class="coaches__card-favourites-button"></button>
-                  </div>
-
-                  <div class="coaches__card-experience">Стаж 5 лет</div>
-                </div>
-
-                <div class="coaches__card-info">
-                  <div class="coaches__card-info-title">Плотников Даниил</div>
-
-                  <div class="coaches__card-info-text">
-                    Ведет тренировки более 5 лет, профессиональный тренер
-                  </div>
-
-                  <div class="coaches__card-info-more">
-                    <a class="coaches__card-info-more-link" href="./coach-for-groups.html">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="coaches__card" data-status="personal" data-gender="female">
-                <div class="coaches__card-top">
-                  <figure class="coaches__card-photo">
-                    <img
-                      class="coaches__card-photo-image"
-                      src="./assets/coaches-photo-5.jpg"
-                      alt="coach"
-                    />
-                  </figure>
-
-                  <div class="coaches__card-favourites">
-                    <button class="coaches__card-favourites-button"></button>
-                  </div>
-
-                  <div class="coaches__card-experience">Стаж 7 лет</div>
-                </div>
-
-                <div class="coaches__card-info">
-                  <div class="coaches__card-info-title">Анна Смирнова</div>
-
-                  <div class="coaches__card-info-text">
-                    Ведет тренировки более 5 лет, персональный тренер
-                  </div>
-
-                  <div class="coaches__card-info-more">
-                    <a class="coaches__card-info-more-link" href="#">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="coaches__card" data-status="professional" data-gender="male">
-                <div class="coaches__card-top">
-                  <figure class="coaches__card-photo">
-                    <img
-                      class="coaches__card-photo-image"
-                      src="./assets/coaches-photo-6.jpg"
-                      alt="coach"
-                    />
-                  </figure>
-
-                  <div class="coaches__card-favourites">
-                    <button class="coaches__card-favourites-button active"></button>
-                  </div>
-
-                  <div class="coaches__card-experience">Стаж 13 лет</div>
-                </div>
-
-                <div class="coaches__card-info">
-                  <div class="coaches__card-info-title">Коровашев Дмитрий</div>
-
-                  <div class="coaches__card-info-text">
-                    Ведет тренировки более 5 лет, профессиональный тренер
-                  </div>
-
-                  <div class="coaches__card-info-more">
-                    <a class="coaches__card-info-more-link" href="./coach-for-groups.html">Подробнее</a>
-                  </div>
+                <div class="coach-for-groups__info-section" data-section="other">
+                  <p>Другое</p>
+                  <ul class="coach-for-groups__info-section-list">
+                    <li class="coach-for-groups__info-section-list-item">
+                      5 лет тренерской практики
+                    </li>
+                    <li class="coach-for-groups__info-section-list-item">
+                      Подготовка клиентов к соревнованиям по фитнес-бикини и бодибилдингу
+                    </li>
+                    <li class="coach-for-groups__info-section-list-item">
+                      Ежегодное участие в конкурсах и тренингах
+                    </li>
+                    <li class="coach-for-groups__info-section-list-item">
+                      Более 20 успешно завершённых программ трансформации
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

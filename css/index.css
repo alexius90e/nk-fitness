@@ -6930,7 +6930,7 @@ body:has(.header_fullfilled) .main {
   max-width: calc(40% - 64px);
   width: 100%;
   padding: 8px 12px;
-  margin-left: 28pz;
+  margin-left: 28px;
   font-weight: 500;
   font-size: 14px;
   line-height: 125%;
@@ -7081,6 +7081,268 @@ body:has(.header_fullfilled) .main {
 }
 .coach-personal__details-signup-button:active {
   background-color: #af3732;
+}
+.coach-personal__details-signup-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(40, 40, 40, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity ease-out 0.2s;
+  transition: opacity ease-out 0.2s;
+}
+@media (max-width: 768px) {
+  .coach-personal__details-signup-modal {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+.coach-personal__details-signup-modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.coach-personal__details-signup-modal-body {
+  position: relative;
+  display: block;
+  width: 916px;
+  max-width: 96dvw;
+  max-height: 96dvh;
+  padding: 48px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 32px;
+  background-color: #fefefe;
+  -webkit-transform: translateY(120dvh);
+          transform: translateY(120dvh);
+  -webkit-transition: -webkit-transform ease-out 0.2s;
+  transition: -webkit-transform ease-out 0.2s;
+  transition: transform ease-out 0.2s;
+  transition: transform ease-out 0.2s, -webkit-transform ease-out 0.2s;
+}
+@media (max-width: 1024px) {
+  .coach-personal__details-signup-modal-body {
+    padding: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .coach-personal__details-signup-modal-body {
+    max-width: 100dvh;
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+.coach-personal__details-signup-modal.active .coach-personal__details-signup-modal-body {
+  -webkit-transform: translateY(0dvh);
+          transform: translateY(0dvh);
+}
+.coach-personal__details-signup-modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: url(../assets/close.svg) center/20px no-repeat;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .coach-personal__details-signup-modal-close {
+    top: 12px;
+    right: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .coach-personal__details-signup-modal-close {
+    display: none;
+  }
+}
+.coach-personal__details-signup-modal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  max-height: calc(96dvh - 96px);
+  overflow: auto;
+}
+@media (max-width: 1024px) {
+  .coach-personal__details-signup-modal-content {
+    max-height: calc(96dvh - 48px);
+  }
+}
+.coach-personal__details-signup-modal-photo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 364px;
+          flex: 0 0 364px;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .coach-personal__details-signup-modal-photo {
+    display: none;
+  }
+}
+.coach-personal__details-signup-modal-photo-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 32px;
+}
+.coach-personal__details-signup-modal-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  gap: 16px;
+}
+.coach-personal__details-signup-modal-info-location {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 12px;
+  margin-left: 28px;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 125%;
+  color: #282828;
+  border-radius: 32px;
+  background: #f4f4fb;
+}
+.coach-personal__details-signup-modal-info-location::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -28px;
+  display: block;
+  width: 20px;
+  height: 28px;
+  background: url(../assets/location_on.svg) top left/20px no-repeat;
+}
+.coach-personal__details-signup-modal-info-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: #282828;
+}
+@media (max-width: 576px) {
+  .coach-personal__details-signup-modal-info-title {
+    font-size: 19px;
+  }
+}
+.coach-personal__details-signup-modal-info-coach {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+.coach-personal__details-signup-modal-info-coach-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #282828;
+}
+.coach-personal__details-signup-modal-info-coach-name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: #282828;
+}
+.coach-personal__details-signup-modal-info-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+.coach-personal__details-signup-modal-info-date-day {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #282828;
+}
+.coach-personal__details-signup-modal-info-date-time {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: #282828;
+}
+.coach-personal__details-signup-modal-info-signup-button {
+  display: inline-block;
+  width: 100%;
+  padding: 16px 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #fefefe;
+  border: none;
+  border-radius: 32px;
+  background-color: #8f2d29;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .coach-personal__details-signup-modal-info-signup-button {
+    width: 100%;
+  }
+}
+.coach-personal__details-signup-modal-info-signup-button:hover {
+  background-color: #9f322d;
+}
+.coach-personal__details-signup-modal-info-signup-button:active {
+  background-color: #af3732;
+}
+.coach-personal__details-signup-modal-info-disclaimer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 125%;
+  color: #808080;
+}
+.coach-personal__details-signup-modal-info-disclaimer a {
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 .coach-personal__info {
   margin: 32px 0 0;

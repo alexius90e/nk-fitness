@@ -1,4 +1,4 @@
-const isNotFoundPageHidden = false;
+const isNotFoundPageHidden = true;
 
 if (isNotFoundPageHidden) {
   const hiddenBlockSelectors = ['.loader', '.cookies'];
@@ -871,5 +871,21 @@ if (schedulePersonalDaysSwiperEl && schedulePersonalEventsSwiperEl) {
       prevEl: schedulePersonalEventsPrevEl,
       nextEl: schedulePersonalEventsNextEl,
     },
+  });
+}
+
+const coachPersonalSignupButton = document.querySelector('.coach-personal__details-signup-button');
+const coachPersonalSignupModal = document.querySelector('.coach-personal__details-signup-modal');
+
+if (coachPersonalSignupButton && coachPersonalSignupModal) {
+  coachPersonalSignupButton.addEventListener('click', () => {
+    coachPersonalSignupModal.classList.add('active');
+  });
+
+  coachPersonalSignupModal.addEventListener('click', (event) => {
+    const isLayout = event.target === event.currentTarget;
+    const isClose = event.target.classList.contains('coach-personal__details-signup-modal-close');
+
+    if (isLayout || isClose) event.currentTarget.classList.remove('active');
   });
 }

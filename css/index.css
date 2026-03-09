@@ -6237,6 +6237,264 @@ body:has(.header_fullfilled) .main {
   background: url(../assets/check.svg) center/cover no-repeat;
 }
 
+.coach-group-training {
+  padding: 48px 0;
+}
+@media (max-width: 576px) {
+  .coach-group-training {
+    padding: 12px 0;
+  }
+}
+.coach-group-training__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 32px;
+  margin: 0 0 32px;
+}
+.coach-group-training__heading-info-title {
+  position: absolute;
+  margin: 0 0 -12px;
+  font-family: "Christopher", sans-serif;
+  font-weight: 500;
+  font-size: 84px;
+  line-height: 100%;
+  color: #4f0001;
+  opacity: 0;
+  pointer-events: none;
+}
+.coach-group-training__heading-info-heading {
+  display: block;
+  margin: 0;
+}
+.coach-group-training__heading-info-heading-image {
+  display: block;
+  max-width: 100%;
+  max-height: 65px;
+  height: auto;
+}
+@media (max-width: 576px) {
+  .coach-group-training__heading-info-heading-image {
+    max-height: 38px;
+  }
+}
+.coach-group-training__heading-info-description {
+  margin: 0 0 32px;
+  padding-left: 32px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 110%;
+  color: #282828;
+}
+@media (max-width: 576px) {
+  .coach-group-training__heading-info-description {
+    margin-bottom: 17px;
+    font-size: 15px;
+  }
+}
+.coach-group-training__heading-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+@media (max-width: 576px) {
+  .coach-group-training__heading-controls {
+    display: none;
+  }
+}
+.coach-group-training__heading-controls-prev, .coach-group-training__heading-controls-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 48px;
+  aspect-ratio: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #e1f0fa;
+  border-radius: 48px;
+  background-color: #fefefe;
+  -webkit-transition: background-color ease-out 0.2s;
+  transition: background-color ease-out 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.coach-group-training__heading-controls-prev:hover, .coach-group-training__heading-controls-next:hover {
+  background-color: #68acd9;
+}
+.coach-group-training__heading-controls-prev:active, .coach-group-training__heading-controls-next:active {
+  background-color: #fefefe;
+}
+.coach-group-training__heading-controls-prev::before, .coach-group-training__heading-controls-next::before {
+  content: "";
+  display: block;
+  width: 24px;
+  aspect-ratio: 1;
+  background: url(../assets/next.svg) center/24px no-repeat;
+}
+.coach-group-training__heading-controls-prev:hover::before, .coach-group-training__heading-controls-next:hover::before {
+  -webkit-filter: brightness(0%) invert(100%);
+          filter: brightness(0%) invert(100%);
+}
+.coach-group-training__heading-controls-prev:active::before, .coach-group-training__heading-controls-next:active::before {
+  -webkit-filter: brightness(100%) invert(0%);
+          filter: brightness(100%) invert(0%);
+}
+.coach-group-training__heading-controls-prev::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.coach-group-training__slider {
+  display: block;
+}
+.coach-group-training__slide {
+  position: relative;
+  padding: 8px 8px 32px;
+  border-radius: 32px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#f3f4fb));
+  background: linear-gradient(180deg, #f7f7f7 0%, #f3f4fb 100%);
+}
+.coach-group-training__slide-favourites-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  display: block;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 16px;
+  background: url(../assets/like-empty.svg) center/32px no-repeat;
+  cursor: pointer;
+}
+.coach-group-training__slide-favourites-button.active {
+  background-image: url(../assets/like-filled.svg);
+}
+.coach-group-training__slide-photo {
+  margin: 0;
+}
+.coach-group-training__slide-photo-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 28px;
+}
+.coach-group-training__slide-title {
+  margin: 32px 0 0;
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: #282828;
+}
+@media (max-width: 576px) {
+  .coach-group-training__slide-title {
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 19px;
+  }
+}
+.coach-group-training__slide-description {
+  margin: 16px 0 0;
+  padding: 0 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #282828;
+}
+.coach-group-training__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 0;
+}
+.coach-group-training__pagination .swiper-pagination-bullet {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 12px;
+  height: 8px;
+  margin: 0 !important;
+  border-radius: 8px;
+  -webkit-transition: width ease-out 0.2s;
+  transition: width ease-out 0.2s;
+}
+.coach-group-training__pagination .swiper-pagination-bullet-active {
+  width: 28px;
+  background-color: #8f2d29;
+}
+.coach-group-training__more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 32px 0 0;
+}
+@media (max-width: 576px) {
+  .coach-group-training__more {
+    display: none;
+  }
+}
+.coach-group-training__more-link {
+  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  min-height: 44px;
+  padding: 12px 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #282828;
+  border: none;
+  border-radius: 32px;
+  background-color: #f4f4fb;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  cursor: pointer;
+}
+.coach-group-training__more-link:hover {
+  background-color: #f2f8fd;
+}
+.coach-group-training__more-link:active {
+  background-color: #e1f0fa;
+}
+
 .not-found {
   position: relative;
   padding: 391px 0 196px;

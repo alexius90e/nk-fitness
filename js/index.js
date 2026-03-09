@@ -592,7 +592,6 @@ if (coachesStatusSelectEl && coachesGenderSelectEl) {
   coachesGenderSelect.onChange = filterCoaches;
 }
 
-
 // coach-for-groups
 
 const coachForGroupsMenuButtons = document.querySelectorAll('.coach-for-groups__info-menu-button');
@@ -600,7 +599,9 @@ const coachForGroupsSections = document.querySelectorAll('.coach-for-groups__inf
 
 function showCoachForGroupsSection(target) {
   coachForGroupsSections.forEach((section) => section.classList.remove('active'));
-  const section = document.querySelector(`.coach-for-groups__info-section[data-section="${target}"]`);
+  const section = document.querySelector(
+    `.coach-for-groups__info-section[data-section="${target}"]`,
+  );
   if (section) section.classList.add('active');
 }
 
@@ -612,7 +613,58 @@ coachForGroupsMenuButtons.forEach((button) => {
   });
 });
 
-const activeCoachForGroupsMenuButton = document.querySelector('.coach-for-groups__info-menu-button.active');
+const activeCoachForGroupsMenuButton = document.querySelector(
+  '.coach-for-groups__info-menu-button.active',
+);
 if (activeCoachForGroupsMenuButton) {
   showCoachForGroupsSection(activeCoachForGroupsMenuButton.dataset.target);
 }
+
+// coach-group-training
+
+const coachGroupTrainingSwiperEl = document.querySelector('.coach-group-training .swiper');
+const coachGroupTrainingPrevBtnEl = document.querySelector(
+  '.coach-group-training__heading-controls-prev',
+);
+const coachGroupTrainingNextBtnEl = document.querySelector(
+  '.coach-group-training__heading-controls-next',
+);
+const coachGroupTrainingPaginationEl = document.querySelector('.coach-group-training__pagination');
+
+if (coachGroupTrainingSwiperEl) {
+  const coachGroupTrainingSwiper = new Swiper(coachGroupTrainingSwiperEl, {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 24,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      577: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+    },
+    pagination: {
+      el: coachGroupTrainingPaginationEl,
+      clickable: true,
+    },
+    navigation: {
+      prevEl: coachGroupTrainingPrevBtnEl,
+      nextEl: coachGroupTrainingNextBtnEl,
+    },
+  });
+}
+
+const coachGroupTrainingSlides = document.querySelectorAll('.coach-group-training__slide');
+
+coachGroupTrainingSlides.forEach((card) => {
+  card.addEventListener('click', (event) => {
+    const isFavouritesButton = event.target.classList.contains(
+      'coach-group-training__slide-favourites-button',
+    );
+    if (isFavouritesButton) event.target.classList.toggle('active');
+  });
+});

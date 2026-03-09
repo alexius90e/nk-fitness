@@ -1,3 +1,11 @@
+const isNotFoundPageHidden = true;
+
+const hiddenBlockSelectors = ['.loader', '.cookies'];
+hiddenBlockSelectors.forEach((selector) => {
+  const hiddenBlockEl = document.querySelector(selector);
+  if (hiddenBlockEl) hiddenBlockEl.style.display = 'none';
+});
+
 // header
 
 const headerEl = document.querySelector('.header');
@@ -452,3 +460,14 @@ if (tariffsMoreEl) {
     }
   });
 }
+
+// coaches
+
+const coachesCards = document.querySelectorAll('.coaches__card');
+
+coachesCards.forEach((card) => {
+  card.addEventListener('click', (event) => {
+    const isFavouritesButton = event.target.classList.contains('coaches__card-favourites-button');
+    if (isFavouritesButton) event.target.classList.toggle('active');
+  });
+});

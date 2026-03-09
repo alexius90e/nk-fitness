@@ -5640,6 +5640,210 @@ body:has(.header_fullfilled) .main {
   height: auto;
 }
 
+.coaches {
+  position: relative;
+  padding: 48px 0;
+  overflow-x: hidden;
+}
+@media (max-width: 576px) {
+  .coaches {
+    padding: 12px 0;
+  }
+}
+.coaches__wrapper {
+  display: block;
+}
+.coaches__title {
+  position: absolute;
+  margin: 0 0 -12px;
+  font-family: "Christopher", sans-serif;
+  font-weight: 500;
+  font-size: 84px;
+  line-height: 100%;
+  color: #4f0001;
+  opacity: 0;
+  pointer-events: none;
+}
+.coaches__heading {
+  margin: 0;
+}
+.coaches__heading-image {
+  display: block;
+  max-width: 100%;
+  max-height: 65px;
+  height: auto;
+}
+@media (max-width: 576px) {
+  .coaches__heading-image {
+    max-height: 38px;
+  }
+}
+.coaches__description {
+  margin: 0 0 32px;
+  padding-left: 32px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 110%;
+  color: #282828;
+}
+@media (max-width: 576px) {
+  .coaches__description {
+    margin-bottom: 16px;
+    font-size: 15px;
+  }
+}
+.coaches__filter {
+  margin: 32px 0;
+}
+@media (max-width: 576px) {
+  .coaches__filter {
+    margin: 16px 0;
+  }
+}
+.coaches__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+}
+.coaches__card {
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(33.3333333333% - 16px);
+          flex: 0 0 calc(33.3333333333% - 16px);
+  max-width: calc(33.3333333333% - 16px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (max-width: 1024px) {
+  .coaches__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 12px);
+            flex: 0 0 calc(50% - 12px);
+    max-width: calc(50% - 12px);
+  }
+}
+@media (max-width: 576px) {
+  .coaches__card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    max-width: none;
+  }
+}
+.coaches__card-top {
+  position: relative;
+}
+.coaches__card-photo {
+  margin: 0;
+}
+.coaches__card-photo-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 32px;
+}
+.coaches__card-favourites-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  display: block;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 16px;
+  background: url(../assets/like-empty.svg) center/32px no-repeat;
+  cursor: pointer;
+}
+.coaches__card-favourites-button.active {
+  background-image: url(../assets/like-filled.svg);
+}
+.coaches__card-experience {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 10;
+  display: block;
+  padding: 12px 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #fefefe;
+  border: 1px solid #f4f4fb;
+  border-radius: 32px;
+  background: rgba(60, 63, 92, 0.4);
+}
+.coaches__card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  padding: 32px 16px 0;
+}
+.coaches__card-info-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: #282828;
+}
+.coaches__card-info-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 125%;
+  color: #282828;
+}
+.coaches__card-info-more {
+  margin: 0;
+  padding: 0;
+}
+.coaches__card-info-more-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: #8f2d29;
+  -webkit-transition: color ease-out 0.2s;
+  transition: color ease-out 0.2s;
+  cursor: pointer;
+}
+.coaches__card-info-more-link:hover {
+  color: #9f322d;
+}
+.coaches__card-info-more-link:active {
+  color: #af3732;
+}
+.coaches__card-info-more-link::after {
+  content: "";
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 16px;
+  aspect-ratio: 1;
+  background: url(../assets/arrow-red.svg) center/cover no-repeat;
+}
+
 .not-found {
   position: relative;
   padding: 391px 0 196px;

@@ -1,7 +1,6 @@
 .coaches {
   position: relative;
   padding: 48px 0;
-  overflow-x: hidden;
 
   @include mobile {
     padding: 12px 0;
@@ -53,10 +52,24 @@
   }
 
   &__filter {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 24px;
     margin: 32px 0;
 
     @include mobile {
       margin: 16px 0;
+    }
+
+    &-select {
+      flex: 0 0 calc(100% / 2 - 24px / 2);
+      max-width: calc(100% / 2 - 24px / 2);
+
+      @include mobile {
+        flex: 1 1 100%;
+        max-width: none;
+      }
     }
   }
 
@@ -81,6 +94,10 @@
     @include mobile {
       flex: 1 1 100%;
       max-width: none;
+    }
+
+    &.hidden {
+      display: none;
     }
 
     &-top {

@@ -38,6 +38,79 @@ textarea {
           box-sizing: border-box;
 }
 
+.custom-select {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.custom-select__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 24px;
+  padding: 16px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #282828;
+  border: none;
+  border-radius: 32px;
+  background: #f4f4fb;
+  cursor: pointer;
+}
+.custom-select__header::after {
+  content: "";
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  background: url(../assets/dropdown.svg) center/cover no-repeat;
+  -webkit-transition: -webkit-transform ease-out 0.2s;
+  transition: -webkit-transform ease-out 0.2s;
+  transition: transform ease-out 0.2s;
+  transition: transform ease-out 0.2s, -webkit-transform ease-out 0.2s;
+}
+.custom-select.open .custom-select__header::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.custom-select__options {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #f4f4fb;
+  border-radius: 32px;
+  overflow: hidden;
+  display: none;
+}
+.custom-select.open .custom-select__options {
+  display: block;
+}
+.custom-select__option {
+  display: block;
+  padding: 16px 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #282828;
+  border-radius: 32px;
+  background-color: #f4f4fb;
+  cursor: pointer;
+}
+.custom-select__option:hover {
+  background: #f2f2f2;
+}
+
 .header {
   position: absolute;
   top: 32px;
@@ -5643,7 +5716,6 @@ body:has(.header_fullfilled) .main {
 .coaches {
   position: relative;
   padding: 48px 0;
-  overflow-x: hidden;
 }
 @media (max-width: 576px) {
   .coaches {
@@ -5693,11 +5765,34 @@ body:has(.header_fullfilled) .main {
   }
 }
 .coaches__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 12px 24px;
   margin: 32px 0;
 }
 @media (max-width: 576px) {
   .coaches__filter {
     margin: 16px 0;
+  }
+}
+.coaches__filter-select {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(50% - 12px);
+          flex: 0 0 calc(50% - 12px);
+  max-width: calc(50% - 12px);
+}
+@media (max-width: 576px) {
+  .coaches__filter-select {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    max-width: none;
   }
 }
 .coaches__cards {
@@ -5735,6 +5830,9 @@ body:has(.header_fullfilled) .main {
             flex: 1 1 100%;
     max-width: none;
   }
+}
+.coaches__card.hidden {
+  display: none;
 }
 .coaches__card-top {
   position: relative;

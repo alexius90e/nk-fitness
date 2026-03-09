@@ -6,6 +6,79 @@ hiddenBlockSelectors.forEach((selector) => {
   if (hiddenBlockEl) hiddenBlockEl.style.display = 'none';
 });
 
+// custom select
+
+class CustomSelect {
+  constructor({ element, options, defaultText = 'Показать все', onChange }) {
+    this.container = element;
+    this.options = options;
+    this.defaultText = defaultText;
+    this.value = '';
+    this.onChange = onChange;
+
+    this.render();
+  }
+
+  render() {
+    this.container.classList.add('custom-select');
+
+    this.header = document.createElement('div');
+    this.header.className = 'custom-select__header';
+    this.header.textContent = this.defaultText;
+
+    this.optionsContainer = document.createElement('div');
+    this.optionsContainer.className = 'custom-select__options';
+
+    const defaultOption = this.createOption('', this.defaultText);
+    this.optionsContainer.appendChild(defaultOption);
+
+    this.options.forEach((opt) => {
+      const option = this.createOption(opt.value, opt.label);
+      this.optionsContainer.appendChild(option);
+    });
+
+    this.container.appendChild(this.header);
+    this.container.appendChild(this.optionsContainer);
+
+    this.addEvents();
+  }
+
+  createOption(value, label) {
+    const div = document.createElement('div');
+    div.className = 'custom-select__option';
+    div.textContent = label;
+    div.dataset.value = value;
+
+    div.addEventListener('click', () => {
+      this.value = value;
+      this.header.textContent = label;
+      this.container.classList.remove('open');
+
+      if (this.onChange) {
+        this.onChange(value);
+      }
+    });
+
+    return div;
+  }
+
+  addEvents() {
+    this.header.addEventListener('click', () => {
+      this.container.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!this.container.contains(e.target)) {
+        this.container.classList.remove('open');
+      }
+    });
+  }
+
+  getValue() {
+    return this.value;
+  }
+}
+
 // header
 
 const headerEl = document.querySelector('.header');
@@ -157,8 +230,6 @@ servicesItemEls.forEach((servicesItem) => {
 // services list
 
 const servicesListSwiperEl = document.querySelector('.services-list .swiper');
-
-console.log(servicesListSwiperEl);
 
 if (servicesListSwiperEl) {
   const servicesListSwiper = new Swiper(servicesListSwiperEl, {
@@ -471,3 +542,53 @@ coachesCards.forEach((card) => {
     if (isFavouritesButton) event.target.classList.toggle('active');
   });
 });
+
+const coachesStatusSelect = new CustomSelect({
+  element: document.getElementById('coachesStatusSelect'),
+  defaultText: 'Все тренеры',
+  options: [
+    { value: 'personal', label: 'Персональный тренер' },
+    { value: 'professional', label: 'Тренеры групповых занятий' },
+    { value: 'universal', label: 'Универсальные тренера' },
+  ],
+  onChange: (value) => {
+    console.log('status:', value);
+  },
+});
+
+const coachesGenderSelect = new CustomSelect({
+  element: document.getElementById('coachesGenderSelect'),
+  defaultText: 'Пол',
+  options: [
+    { value: 'male', label: 'Мужской' },
+    { value: 'female', label: 'Женский' },
+  ],
+  onChange: (value) => {
+    console.log('gender:', value);
+  },
+});
+
+function filterCoaches() {
+  const statusValue = coachesStatusSelect.value;
+  const genderValue = coachesGenderSelect.value;
+
+  coachesCards.forEach((card) => {
+    const cardStatus = card.dataset.status;
+    const cardGender = card.dataset.gender;
+
+    if (statusValue === cardStatus && genderValue === cardGender) {
+      card.classList.remove('hidden');
+    } else if (statusValue === '' && genderValue === '') {
+      card.classList.remove('hidden');
+    } else if (statusValue === '' && genderValue === cardGender) {
+      card.classList.remove('hidden');
+    } else if (statusValue === cardStatus && genderValue === '') {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+}
+
+coachesStatusSelect.onChange = filterCoaches;
+coachesGenderSelect.onChange = filterCoaches;
